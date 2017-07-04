@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'jiajiaobao';
-  src:  url('fonts/jiajiaobao.eot?h7c5h1');
-  src:  url('fonts/jiajiaobao.eot?h7c5h1#iefix') format('embedded-opentype'),
-    url('fonts/jiajiaobao.ttf?h7c5h1') format('truetype'),
-    url('fonts/jiajiaobao.woff?h7c5h1') format('woff'),
-    url('fonts/jiajiaobao.svg?h7c5h1#jiajiaobao') format('svg');
+  src:  url('../fonts/jiajiaobao.eot?h7c5h1');
+  src:  url('../fonts/jiajiaobao.eot?h7c5h1#iefix') format('embedded-opentype'),
+    url('../fonts/jiajiaobao.ttf?h7c5h1') format('truetype'),
+    url('../fonts/jiajiaobao.woff?h7c5h1') format('woff'),
+    url('../fonts/jiajiaobao.svg?h7c5h1#jiajiaobao') format('svg');
   font-weight: normal;
   font-style: normal;
 }

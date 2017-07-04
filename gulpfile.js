@@ -53,11 +53,10 @@ gulp.task('sass', function() {
         cssDst = 'dist/css';
 
     gulp.src(cssSrc)
-
+        .pipe(changed(cssDst))
         .pipe(plumber())
         .pipe(sass({ style: 'expanded' }))
         // .pipe(rename({ suffix: '.min' }))
-        .pipe(changed(cssDst))
         .pipe(autoPrefixer())
         .pipe(cleanCss())
         .pipe(gulp.dest(cssDst))
@@ -68,6 +67,7 @@ gulp.task('sass', function() {
 gulp.task('images', function() {
     var imgSrc = 'src/images/**',
         imgDst = 'dist/images';
+
     gulp.src(imgSrc)
         .pipe(changed(imgDst))
         .pipe(plumber())
@@ -82,13 +82,13 @@ gulp.task('js', function() {
         jsDst = 'dist/js';
 
     gulp.src(jsSrc)
+        .pipe(changed(jsDst))
         .pipe(plumber())
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
         // .pipe(concat('main.js'))
         // .pipe(gulp.dest(jsDst))
         // .pipe(rename({ suffix: '.min' }))
-        .pipe(changed(jsDst))
         .pipe(uglify())
         .pipe(gulp.dest(jsDst))
         .pipe(reload({ stream: true }));
@@ -102,13 +102,13 @@ gulp.task('sync',function(){
 });
 
 // 清空图片、样式、js
-gulp.task('clean', function() {
+gulp.task('cleanfile', function() {
     gulp.src(['dist/images', 'dist/css', 'dist/js'], { read: false })
         .pipe(clean());
 });
 gulp.task('build',['sync','html','sass','js','images','watch','server']);
 // 默认任务 清空图片、样式、js并重建 运行语句 gulp
-gulp.task('default', ['clean'], function() {
+gulp.task('default', ['cleanfile'], function() {
     gulp.start('build');
 });
 // 监听任务 运行语句 gulp watch

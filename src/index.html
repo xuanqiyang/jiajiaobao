@@ -1,24 +1,175 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Document</title>
 </head>
-<body>
-<div class="header">
-    <div class="tools-bar">
-        <ul>
-            <li>请登录</li>
-            <li>免费注册</li>
-            <li>手机家教宝</li>
-            <li>关注领好课</li>
-        </ul>
 
+<body>
+<!--[if lt IE 8]>
+<div class="browser-upgrade">
+    <div class="wrapper">您的浏览器版本过低，为了保证更好的安全性和浏览体验，建议更换高级浏览器，如：
+        <a href="http://www.baidu.com/s?wd=谷歌浏览器">谷歌浏览器</a><a href="http://www.baidu.com/s?wd=火狐浏览器">火狐浏览器</a>
+        <a href="http://www.baidu.com/s?wd=360极速浏览器">360 极速浏览器</a>
     </div>
 </div>
+<style>
+    body {padding-top: 40px;}
+    .browser-upgrade {background-color: #DA7575;border-bottom: 1px solid #D65F39;color: #F0F0F0;padding: 10px 0;position: absolute;top: 0;left: 0;width: 100%;z-index: 10000;}
+    .browser-upgrade .wrapper {width: 1100px;margin: 0 auto;}
+    .browser-upgrade a {color: yellow;margin-right: 10px;text-decoration: underline;}
+</style>
+<![endif]-->
+    <div class="header">
+        <div class="tools-bar container">
+            <ul class="tools-left">
+                <li><a class="icon-1">请登录</a></li>
+                <li><a>免费注册</a></li>
+                <li><a class="icon-2">手机家教宝</a></li>
+                <li><a class="icon-3">关注领好课</a></li>
+            </ul>
+            <ul class="tools-right">
+                <li><a href="">家教宝首页</a></li>
+                <li><a href="">我的家教宝</a><i class="icon-81"></i></li>
+                <li><a class="icon-4" href="">我的课表</a></li>
+                <li><span>客服热线:020-34332718</span></li>
+            </ul>
+        </div>
+        <div class="search-wrapper container">
+            <div class="search-form" data-cur="teacher"
+                 data-placeholder="搜索你想学的科目、老师试试"
+                 data-courseplaceholder="搜索你想学的课程试试"
+                 data-orgplaceholder="搜索你要找的科目、机构试试" style="top:8px;">
+                <div class="search-tab">
+                    <div class="tab-item teacher active">老师</div>
+                    <div class="tab-item course ">课程</div>
+                    <div class="tab-item org ">机构</div>
+                </div>
+                <i class="icon icon-6"></i>
+                <div class="placeholder-wrappers">
+                    <div class="placeholder">搜索你想学的科目、老师试试</div>
+                    <input class="search-input form-text" type="text" name="q" autocomplete="off">
+                </div>
+                <input type="hidden" name="city" value="">
+                <button class="btn">搜索</button>
+                <p class="search-hotwords">
+                <a href="">语文</a><a href="">数学</a><a href="">英语</a><a href="">家庭教育</a><a href="">托福</a><a href="">雅思</a>
+                </p>
+            </div>
+            <ul class="enter-box">
+                <li>
+                    <a href="">
+                        <i class="icon icon-7"></i>
+                        <span>老师入驻</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="icon icon-8"></i>
+                        <span>机构入驻</span>
+                    </a>
+                </li>
+            </ul>
+            <a class="logo"></a>
+            <div class="city">
+                <strong>广州</strong>
+                <div class="city-trigger">
+                    <a href="/changecity/init">切换城市</a>
+                </div>
+            </div>
+        </div>
+        <!--<div>-->
+            <!--<li>-->
+                <!--<dl>-->
+                    <!--<dt></dt>-->
+                    <!--<dd>-->
+                        <!--<a href=""></a>-->
+                    <!--</dd>-->
+                    <!--<dd>-->
+                        <!--<a href=""></a>-->
+                    <!--</dd>-->
+                    <!--<dd>-->
+                        <!--<a href=""></a>-->
+                    <!--</dd>-->
+                <!--</dl>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<dl>-->
+                    <!--<dt></dt>-->
+                    <!--<dd>-->
+                        <!--<a href=""></a>-->
+                    <!--</dd>-->
+                    <!--<dd>-->
+                        <!--<a href=""></a>-->
+                    <!--</dd>-->
+                    <!--<dd>-->
+                        <!--<a href=""></a>-->
+                    <!--</dd>-->
+                <!--</dl>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<dl>-->
+                    <!--<dt></dt>-->
+                    <!--<dd>-->
+                        <!--<a href=""></a>-->
+                    <!--</dd>-->
+                    <!--<dd>-->
+                        <!--<a href=""></a>-->
+                    <!--</dd>-->
+                    <!--<dd>-->
+                        <!--<a href=""></a>-->
+                    <!--</dd>-->
+                <!--</dl>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<dl>-->
+                    <!--<dt></dt>-->
+                    <!--<dd>-->
+                        <!--<a href=""></a>-->
+                    <!--</dd>-->
+                    <!--<dd>-->
+                        <!--<a href=""></a>-->
+                    <!--</dd>-->
+                    <!--<dd>-->
+                        <!--<a href=""></a>-->
+                    <!--</dd>-->
+                <!--</dl>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<dl>-->
+                    <!--<dt></dt>-->
+                    <!--<dd>-->
+                        <!--<a href=""></a>-->
+                    <!--</dd>-->
+                    <!--<dd>-->
+                        <!--<a href=""></a>-->
+                    <!--</dd>-->
+                    <!--<dd>-->
+                        <!--<a href=""></a>-->
+                    <!--</dd>-->
+                <!--</dl>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<dl>-->
+                    <!--<dt></dt>-->
+                    <!--<dd>-->
+                        <!--<a href=""></a>-->
+                    <!--</dd>-->
+                    <!--<dd>-->
+                        <!--<a href=""></a>-->
+                    <!--</dd>-->
+                    <!--<dd>-->
+                        <!--<a href=""></a>-->
+                    <!--</dd>-->
+                <!--</dl>-->
+            <!--</li>-->
+        <!--</div>-->
+    </div>
 </body>
-    <script type="text/javascript" src="js/require.js" data-main="js/main"></script>
+<script type="text/javascript" src="js/require.js" data-main="js/main"></script>
+
 </html>
