@@ -1,8 +1,9 @@
 require.config({　　　　
     paths: {
-        "jquery": "lib/jquery.min",
-        "validate": "lib/jquery.validate.min.js",
-        "messages": "lib/messages_zh.min.js"
+        "jquery": "lib/jquery",
+        "validate": "lib/jquery.validate.min",
+        "messages": "lib/messages_zh.min",
+        "superSlide": "lib/jquery.SuperSlide"
     },
     shim: {
         'validate': {
@@ -12,8 +13,17 @@ require.config({　　　　
         'messages': {
             deps: ['jquery', 'validate'],
             exports: "messages"
+        },
+        'superSlide': {
+            deps: ['jquery'],
+            exports: 'superSlide'
         }
     }　　
+});
+
+require(['jquery', 'superSlide'], function() {
+    jQuery(".focus").hover(function() { jQuery(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.2) }, function() { jQuery(this).find(".prev,.next").fadeOut() });
+    jQuery(".focus").slide({ mainCell: ".pic", effect: "fold", autoPlay: true, delayTime: 600, trigger: "click" });
 });
 require(['jquery'], function($) {
     //改变placeholder内容
@@ -34,7 +44,7 @@ require(['jquery'], function($) {
         } else {
             $sibPlaceholder.show();
         }
-        $sibPlaceholder.click(function(){
+        $sibPlaceholder.click(function() {
             $that.trigger('focus');
         })
         $(this).focus(function() {
@@ -47,5 +57,6 @@ require(['jquery'], function($) {
             }
         });
     })
+});
 
-})
+
