@@ -1,7 +1,6 @@
 {
   "name": "jiajiaobao",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -28,5 +27,14 @@
     "gulp.spritesmith": "^6.5.0",
     "jshint": "^2.9.5",
     "webpack": "^3.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuanqiyang/jiajiaobao.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xuanqiyang/jiajiaobao/issues"
+  },
+  "homepage": "https://github.com/xuanqiyang/jiajiaobao#readme",
+  "description": ""
 }
