@@ -1,4 +1,5 @@
-require.config({　　　　
+require.config({
+    baseUrl: 'js',　　　
     paths: {
         'jquery': 'lib/jquery',
         'validate': 'lib/jquery.validate.min',
@@ -18,9 +19,8 @@ require.config({　　　　
             deps: ['jquery'],
             exports: 'superSlide'
         }
-    }　　
+    }
 });
-
 
 require(['jquery', 'superSlide'], function() {
     jQuery('.focus').hover(function() { jQuery(this).find('.prev,.next').stop(true, true).fadeTo('show', 0.2) }, function() { jQuery(this).find('.prev,.next').fadeOut() });
@@ -128,3 +128,4 @@ require(['jquery'], function($) {
         //     timer = null;
         // },300)
 });
+

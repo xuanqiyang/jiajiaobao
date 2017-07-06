@@ -3,14 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/dialog.css">
     <title>Document</title>
 </head>
 
 <body>
-    <!--[if lt IE 8]>
+<!--[if lt IE 8]>
 <div class="browser-upgrade">
     <div class="wrapper">您的浏览器版本过低，为了保证更好的安全性和浏览体验，建议更换高级浏览器，如：
         <a href="http://www.baidu.com/s?wd=谷歌浏览器">谷歌浏览器</a><a href="http://www.baidu.com/s?wd=火狐浏览器">火狐浏览器</a>
@@ -18,352 +20,412 @@
     </div>
 </div>
 <style>
-    body {padding-top: 40px;}
-    .browser-upgrade {background-color: #DA7575;border-bottom: 1px solid #D65F39;color: #F0F0F0;padding: 10px 0;position: absolute;top: 0;left: 0;width: 100%;z-index: 10000;}
-    .browser-upgrade .wrapper {width: 1100px;margin: 0 auto;}
-    .browser-upgrade a {color: yellow;margin-right: 10px;text-decoration: underline;}
+    body {
+        padding-top: 40px;
+    }
+
+    .browser-upgrade {
+        background-color: #DA7575;
+        border-bottom: 1px solid #D65F39;
+        color: #F0F0F0;
+        padding: 10px 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10000;
+    }
+
+    .browser-upgrade .wrapper {
+        width: 1100px;
+        margin: 0 auto;
+    }
+
+    .browser-upgrade a {
+        color: yellow;
+        margin-right: 10px;
+        text-decoration: underline;
+    }
 </style>
 <![endif]-->
-    <div class="header">
-        <div class="tools-bar">
-            <div class="container">
-                <ul class="tools-left">
-                    <li><a class="icon-1">请登录</a></li>
-                    <li><a>免费注册</a></li>
-                    <li><a class="icon-2">手机家教宝</a></li>
-                    <li><a class="icon-3">关注领好课</a></li>
-                </ul>
-                <ul class="tools-right">
-                    <li><a href="">家教宝首页</a></li>
-                    <li><a href="">我的家教宝</a><i class="icon-81"></i></li>
-                    <li><a class="icon-4" href="">我的课表</a></li>
-                    <li><span>客服热线:020-34332718</span></li>
-                </ul>
-            </div>
-        </div>
-        <div class="search-wrapper container">
-            <div class="search-form" data-cur="teacher" data-placeholder="搜索你想学的科目、老师试试" data-courseplaceholder="搜索你想学的课程试试" data-orgplaceholder="搜索你要找的科目、机构试试" style="top:8px;">
-                <div class="search-tab">
-                    <div class="tab-item teacher active">老师</div>
-                    <div class="tab-item course ">课程</div>
-                    <div class="tab-item org ">机构</div>
-                </div>
-                <i class="icon icon-6"></i>
-                <div class="placeholder-wrappers">
-                    <div class="placeholder">搜索你想学的科目、老师试试</div>
-                    <input class="search-input form-text" type="text" name="q" autocomplete="off">
-                </div>
-                <input type="hidden" name="city" value="">
-                <button class="btn">搜索</button>
-                <p class="search-hotwords">
-                    <a href="">语文</a><a href="">数学</a><a href="">英语</a><a href="">家庭教育</a><a href="">托福</a><a href="">雅思</a>
-                </p>
-            </div>
-            <ul class="enter-box">
-                <li>
-                    <a href="">
-                        <i class="icon icon-7"></i>
-                        <span>老师入驻</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <i class="icon icon-8"></i>
-                        <span>机构入驻</span>
-                    </a>
-                </li>
+<div class="header">
+    <div class="tools-bar">
+        <div class="container">
+            <ul class="tools-left">
+                <li><a class="icon-1">请登录</a></li>
+                <li><a>免费注册</a></li>
+                <li><a class="icon-2">手机家教宝</a></li>
+                <li><a class="icon-3">关注领好课</a></li>
             </ul>
-            <a class="logo"></a>
-            <div class="city">
-                <strong>广州</strong>
-                <div class="city-trigger">
-                    <a href="/changecity/init">切换城市</a>
-                </div>
+            <ul class="tools-right">
+                <li><a href="">家教宝首页</a></li>
+                <li><a href="">我的家教宝</a><i class="icon-81"></i></li>
+                <li><a class="icon-4" href="">我的课表</a></li>
+                <li><span>客服热线:020-34332718</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="search-wrapper container">
+        <div class="search-form" data-cur="teacher" data-placeholder="搜索你想学的科目、老师试试" data-courseplaceholder="搜索你想学的课程试试"
+             data-orgplaceholder="搜索你要找的科目、机构试试" style="top:8px;">
+            <div class="search-tab">
+                <div class="tab-item active">老师</div>
+                <div class="tab-item">课程</div>
+                <div class="tab-item">机构</div>
+            </div>
+            <i class="icon icon-6"></i>
+            <div class="placeholder-wrappers">
+                <div class="placeholder">搜索你想学的科目、老师试试</div>
+                <input class="search-input form-text" type="text" name="q" autocomplete="off">
+            </div>
+            <input type="hidden" name="city" value="">
+            <button class="btn">搜索</button>
+            <p class="search-hotwords">
+                <a href="">语文</a><a href="">数学</a><a href="">英语</a><a href="">家庭教育</a><a href="">托福</a><a href="">雅思</a>
+            </p>
+        </div>
+        <ul class="enter-box">
+            <li>
+                <a href="">
+                    <i class="icon icon-7"></i>
+                    <span>老师入驻</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="icon icon-8"></i>
+                    <span>机构入驻</span>
+                </a>
+            </li>
+        </ul>
+        <a class="logo"></a>
+        <div class="city">
+            <strong>广州</strong>
+            <div class="city-trigger">
+                <a href="/changecity/init">切换城市</a>
             </div>
         </div>
-        <div class="nav">
-            <div class="container">
-                <div class="all-couser pull-left">
-                    <div class="menu-title">
-                        <h1>全部课程</h1>
-                    </div>
-                    <div class="menu-wrapper">
-                        <ul class="menu">
-                            <li>
-                                <dl>
-                                    <dt>高中</dt>
-                                    <dd><a href="/l-c1-a1-n135/">高三语文</a></dd>
-                                    <dd><a href="/l-c1-a1-n124/">高三数学</a></dd>
-                                    <dd><a href="/l-c1-a1-n115/">高三英语</a></dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt>初中</dt>
-                                    <dd><a href="/l-c1-a1-n130/">初三语文</a></dd>
-                                    <dd><a href="/l-c1-a1-n119/">初三数学</a></dd>
-                                    <dd><a href="/l-c1-a1-n112/">初三英语</a></dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt>小学</dt>
-                                    <dd><a href="/l-c1-a1-n109/">小学语文</a></dd>
-                                    <dd><a href="/l-c1-a1-n100/">小学数学</a></dd>
-                                    <dd><a href="/l-c1-a1-n102/">小学英语</a></dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt>语言</dt>
-                                    <dd><a href="/l-c1-a1-n100/">雅思</a></dd>
-                                    <dd><a href="/l-c1-a1-n217/">托福</a></dd>
-                                    <dd><a href="/l-c1-a1-n132/">英语口语</a></dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt>艺术</dt>
-                                    <dd><a href="/l-c1-a1-n131/">钢琴</a></dd>
-                                    <dd><a href="/l-c1-a1-n213/">吉他</a></dd>
-                                    <dd><a href="/l-c1-a1-n108/">小提琴</a></dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl>
-                                    <dt>其它</dt>
-                                    <dd><a href="/l-c1-a1-n141/">乒乓球</a></dd>
-                                    <dd><a href="/l-c1-a1-n138/">羽毛球</a></dd>
-                                    <dd><a href="/l-c1-a1-n138/">跆拳道</a></dd>
-                                </dl>
-                            </li>
-                        </ul>
-                        <div class="sub-menu" style="display: none;">
-                            <div class="sub-menu-content">
-                                <dl>
-                                    <dt>高中</dt>
-                                    <dd>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                    </dd>
-                                </dl>
-                            </div>
-                            <div class="sub-menu-content">
-                                <dl>
-                                    <dt>初中</dt>
-                                    <dd>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                    </dd>
-                                </dl>
-                            </div>
-                            <div class="sub-menu-content">
-                                <dl>
-                                    <dt>初中</dt>
-                                    <dd>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                    </dd>
-                                </dl>
-                            </div>
-                            <div class="sub-menu-content">
-                                <dl>
-                                    <dt>初中</dt>
-                                    <dd>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                    </dd>
-                                </dl>
-                            </div>
-                            <div class="sub-menu-content">
-                                <dl>
-                                    <dt>初中</dt>
-                                    <dd>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                    </dd>
-                                </dl>
-                            </div>
-                            <div class="sub-menu-content">
-                                <dl>
-                                    <dt>初中</dt>
-                                    <dd>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                        <a href="">数学</a>
-                                    </dd>
-                                </dl>
-                            </div>
+    </div>
+    <div class="nav">
+        <div class="container">
+            <div class="all-couser pull-left">
+                <div class="menu-title">
+                    <h1>全部课程</h1>
+                </div>
+                <div class="menu-wrapper">
+                    <ul class="menu">
+                        <li>
+                            <dl>
+                                <dt>高中</dt>
+                                <dd><a href="/l-c1-a1-n135/">高三语文</a></dd>
+                                <dd><a href="/l-c1-a1-n124/">高三数学</a></dd>
+                                <dd><a href="/l-c1-a1-n115/">高三英语</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>初中</dt>
+                                <dd><a href="/l-c1-a1-n130/">初三语文</a></dd>
+                                <dd><a href="/l-c1-a1-n119/">初三数学</a></dd>
+                                <dd><a href="/l-c1-a1-n112/">初三英语</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>小学</dt>
+                                <dd><a href="/l-c1-a1-n109/">小学语文</a></dd>
+                                <dd><a href="/l-c1-a1-n100/">小学数学</a></dd>
+                                <dd><a href="/l-c1-a1-n102/">小学英语</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>语言</dt>
+                                <dd><a href="/l-c1-a1-n100/">雅思</a></dd>
+                                <dd><a href="/l-c1-a1-n217/">托福</a></dd>
+                                <dd><a href="/l-c1-a1-n132/">英语口语</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>艺术</dt>
+                                <dd><a href="/l-c1-a1-n131/">钢琴</a></dd>
+                                <dd><a href="/l-c1-a1-n213/">吉他</a></dd>
+                                <dd><a href="/l-c1-a1-n108/">小提琴</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>其它</dt>
+                                <dd><a href="/l-c1-a1-n141/">乒乓球</a></dd>
+                                <dd><a href="/l-c1-a1-n138/">羽毛球</a></dd>
+                                <dd><a href="/l-c1-a1-n138/">跆拳道</a></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    <div class="sub-menu" style="display: none;">
+                        <div class="sub-menu-content">
+                            <dl>
+                                <dt>高中</dt>
+                                <dd>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="sub-menu-content">
+                            <dl>
+                                <dt>初中</dt>
+                                <dd>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="sub-menu-content">
+                            <dl>
+                                <dt>初中</dt>
+                                <dd>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="sub-menu-content">
+                            <dl>
+                                <dt>初中</dt>
+                                <dd>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="sub-menu-content">
+                            <dl>
+                                <dt>初中</dt>
+                                <dd>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="sub-menu-content">
+                            <dl>
+                                <dt>初中</dt>
+                                <dd>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                    <a href="">数学</a>
+                                </dd>
+                            </dl>
                         </div>
                     </div>
                 </div>
-                <ul class="nav-bar pull-left">
-                    <li class="current"><a>首页</a></li>
-                    <li class=""><a>挑老师</a></li>
-                    <li class=""><a>快速请家教</a></li>
-                    <li class=""><a>资费说明</a></li>
-                    <li class=""><a>最新学员</a></li>
-                    <li class=""><a>家长学堂</a></li>
-                </ul>
             </div>
+            <ul class="nav-bar pull-left">
+                <li class="current"><a>首页</a></li>
+                <li class=""><a>挑老师</a></li>
+                <li class=""><a>快速请家教</a></li>
+                <li class=""><a>资费说明</a></li>
+                <li class=""><a>最新学员</a></li>
+                <li class=""><a>家长学堂</a></li>
+            </ul>
         </div>
     </div>
-    <div class="focus">
-        <div class="container find-teacher">
-            <form class="" action="/xuqiu_ok.php" method="post">
-                <h4>快速请家教</h4>
-                <div class="fg">
-                    <input type="text" name="contact" placeholder="联系人姓名" maxlength="10">
-                </div>
-                <div class="fg">
-                    <input type="text" name="stu_xueke" placeholder="家教科目，如初三数学 " maxlength="10">
-                </div>
-                <div class="fg">
-                    <input type="text" name="mobile" placeholder="手机号码" maxlength="11">
-                </div>
-                <div>
-                    <input type="checkbox" checked="checked">
-                    <label>我已阅读并同意<a id="showServeTerms" href="javascript:void(0);">《家教宝服务协议》</a></label>
-                </div>
-                <button class="primary-btn blue-btn" type="submit">提交</button>
-            </form>
+</div>
+<div class="focus">
+    <div class="container find-teacher">
+        <form class="" action="/xuqiu_ok.php" method="post">
+            <h4>快速请家教</h4>
+            <div class="fg">
+                <input type="text" name="contact" placeholder="联系人姓名" maxlength="10">
+            </div>
+            <div class="fg">
+                <input type="text" name="stu_xueke" placeholder="家教科目，如初三数学 " maxlength="10">
+            </div>
+            <div class="fg">
+                <input type="text" name="mobile" placeholder="手机号码" maxlength="11">
+            </div>
+            <div>
+                <input type="checkbox" checked="checked">
+                <label>我已阅读并同意<a id="showServeTerms" href="javascript:void(0);">《家教宝服务协议》</a></label>
+            </div>
+            <button class="primary-btn blue-btn" type="submit">提交</button>
+        </form>
+    </div>
+    <ul class="pic">
+        <li style="background: url(images/focus1.jpg) center 0px no-repeat;">
+            <a href=""></a>
+        </li>
+        <li style="background: url(images/focus1.jpg) center 0px no-repeat;">
+            <a href=""></a>
+        </li>
+        <li style="background: url(images/focus1.jpg) center 0px no-repeat;">
+            <a href=""></a>
+        </li>
+        <li style="background: url(images/focus1.jpg) center 0px no-repeat;">
+            <a href=""></a>
+        </li>
+        <li style="background: url(images/focus1.jpg) center 0px no-repeat;">
+            <a href=""></a>
+        </li>
+    </ul>
+    <a class="prev" href="javascript:void(0);"></a>
+    <a class="next" href="javascript:void(0);"></a>
+    <ul class="hd">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<div class="content container">
+    <div class="nav-link">
+        <a href=""><i class="icon icon-7"></i><span class="icon-desc">注册老师:888888<br>100%资格认证</span></a><a href=""><i class="icon icon-8"></i><span class="icon-desc">注册老师:888888<br>100%资格认证</span></a>
+        <a href=""><i class="icon icon-9"></i><span class="icon-desc">注册老师:888888<br>100%资格认证</span></a>
+    </div>
+    <div class="category">
+        <div class="hd-title">
+            <h2>数万名师 总有你所需</h2>
         </div>
-        <ul class="pic">
-            <li style="background: url(images/focus1.jpg) center 0px no-repeat;">
-                <a href=""></a>
-            </li>
-            <li style="background: url(images/focus1.jpg) center 0px no-repeat;">
-                <a href=""></a>
-            </li>
-            <li style="background: url(images/focus1.jpg) center 0px no-repeat;">
-                <a href=""></a>
-            </li>
-            <li style="background: url(images/focus1.jpg) center 0px no-repeat;">
-                <a href=""></a>
-            </li>
-            <li style="background: url(images/focus1.jpg) center 0px no-repeat;">
-                <a href=""></a>
+        <div class="sub-nav">
+            <h3 class="nav-title icon-10">签约老师</h3>
+            <ul>
+                <li class="nav-item current"><a href="">语文</a></li>
+                <li class="nav-item"><a href="">语文</a></li>
+                <li class="nav-item"><a href="">语文</a></li>
+                <li class="nav-item"><a href="">语文</a></li>
+                <li class="nav-item"><a href="">语文</a></li>
+            </ul>
+        </div>
+        <ul class="item-list">
+            <li class="item">
+                <div class="item-top">
+                    <img src="images/portrait1.png">
+                    <p>刘老师<i>Q3</i></p>
+                </div>
+                <div class="item-bottom top-border">
+
+                </div>
             </li>
         </ul>
-        <a class="prev" href="javascript:void(0);"></a>
-        <a class="next" href="javascript:void(0);"></a>
-        <ul class="hd">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
     </div>
-    <div id="serveTermsDialog" class="hide">
-        <h2>新三板在线服务协议</h2>
-        <div class="info">
-            <p>尊敬的用户：</p>
-            <p class="text-indent">新三板在此特别提醒用户认真阅读、充分理解本协议各条款，特别是其中所涉及的服务介绍、服务终止、用户责任等。请用户审慎阅读并选择接受或不接受本协议，除非用户接受本协议所有条款，否则用户无权使用本网站于本协议下所提供的服务。</p>
-            <strong>1．服务协议的确认和接纳</strong>
-            <p class="text-indent">新三板（<a href="#" target="_blank" title="新三板">www.xinsanban.com</a>）的所有权归新加坡新三板网络有限公司所有，用户如需使用网站会员服务，须仔细阅读并严格遵守新三板制定的《新三板在线服务协议》（以下简称“本协议”），完成注册程序和缴纳所需费用之后，才能享受新三板提供的相关服务。</p>
-            <strong>2．服务所需要的设备和其他条件</strong>
-            <p class="text-indent">为使用新三板会员服务，用户必须：</p>
-            <p class="text-indent">2.1 拥有接入互联网的硬件设备和软件工具，包括但不限于计算机、调制解调器、有关软件和设置，或者其它必备的上网装置和进行有关设置。</p>
-            <p class="text-indent">2.2 用户只有同意新三板制订的本协议后才能提请使用新三板的会员业务和进行支付行为。新三板从实际收到用户支付的款项后开始提供服务。</p>
-            <p class="text-indent">2.3 由于业务上或者技术上的障碍，付费用户在完成支付行为后，新三板可能无法及时开通相应服务，但新三板有义务在排除障碍后及时开通服务。</p>
-            <strong>3．  服务介绍</strong>
-            <p class="text-indent">新三板运用自己的技术力量和存储数据为用户提供有偿服务。考虑到会员服务的重要性和安全性，用户需做到如下要求：</p>
-            <p class="text-indent">3.1 在注册时，需提供真实有效的个人邮箱和手机号。</p>
-            <p class="text-indent">3.2 正确填写相关项目信息、资金信息或其他内容。</p>
-            <p class="text-indent">3.3 如个人资料有任何变动，用户有必要及时更新自己的信息。</p>
-            <p class="text-indent">3.4 需同意协议中各项条款且具备确认本协议和接受会员服务的相应民事行为能力。</p>
-            <p class="text-indent">3.5 需支付相应的费用。</p>
-            <p class="text-indent">3.6 如果用户违反上述规定，新三板保留终止或结束该用户使用服务的权利。</p>
-            <strong>4．  服务购买、开通、取消和终止</strong>
-            <p class="text-indent">4.1 用户接受本协议并完成相应程序，缴纳相应服务费用后，即成为服务的合法使用者。</p>
-            <p class="text-indent">4.2 蓄意重复多次购买但不进行付款的行为将被视作恶意购买行为，新三板有权冻结该用户账号并终止所有服务。</p>
-            <p class="text-indent">4.3 服务费用缴纳之后，在任何情况下，都不进行退款或者延期处理。</p>
-            <p class="text-indent">4.4 支付确认是付费用户用选择的支付方法申请结算后，新三板进行的确认。新三板在结算的时候把用户填写的内容全部看作是事实，填写虚假内容的用户不受到法律保护。</p>
-            <p class="text-indent">4.5 新三板在下列情况下，可以限制或终止全部或部分付费服务：</p>
-            <p class="text-indent">4.5.1. 由于付费服务使用设备的维修等工程而导致的不得已情况；</p>
-            <p class="text-indent">4.5.2. 由于停电、设备障碍或用户量激增而导致无法正常提供付费服务;</p>
-            <p class="text-indent">4.5.3. 出现天灾、国家非常状态等不可抗拒的情况；</p>
-            <p class="text-indent">4.5.4. 该用户被举报或列为信誉不良的注册用户；</p>
-            <p class="text-indent">4.5.5. 明显违反用户注册条款中规定的付费用户；</p>
-            <strong>5．  服务协议的完善和修改</strong>
-            <p class="text-indent">新三板保留在必要时对会员服务进行不断完善和修改的权利。新三板会员服务一旦发生变动，将以公告的方式通知用户，为用户提供优质的服务保证。</p>
-            <p class="text-indent">当条款变更后，用户可以作如下选择：</p>
-            <p class="text-indent">5.1 不再继续使用新三板的服务，已收款项不进行退款。</p>
-            <p class="text-indent">5.2 如用户不作出任何表示并继续使用服务，则视为接受条款的变更。</p>
-            <p class="text-indent">5.3 如用户同意条款变更的内容，当发生争议时，以最新的条款为准。</p>
-            <strong>6．  服务保证制度</strong>
-            <p class="text-indent">新三板会努力完善和提升服务质量，对系统的稳定性、防灾害性、用户信息的安全性、快速性等方面做最大努力。</p>
-            <p class="text-indent">由于不可抗力造成新三板无法继续提供服务，新三板不承担责任。“不可抗力”是指新三板不能合理控制、不可预见或即使预见亦无法避免的事件，该事件妨碍、影响或延误新三板为用户提供服务。该事件包括但不限于政府行为、骨干通信线路故障、地震、台风、洪水、火灾及其它天灾、战争或任何其它类似事件。</p>
-            <strong>7．  用户责任</strong>
-            <p class="text-indent">由于用户过错原因导致新三板损失（包括但不限于因此新三板需对第三方承担的损失）需由用户进行赔偿。</p>
-            <strong>8．  保障</strong>
-            <p class="text-indent">用户同意保障和维护新三板的利益，并承诺支付由于用户违反本条款而引起的费用（包括但不限于赔偿费、律师费，因其他人使用用户的帐号和密码而发生的法律和经济责任）。</p>
-            <strong>9．  新三板通知</strong>
-            <p class="text-indent">用户在使用服务的同时，新三板会以公告的方式通知用户条款的变更、服务的升级或其他新三板发布的重要信息。</p>
-            <strong>10． 所有权</strong>
-            <p class="text-indent">10.1 网站所有内容的选材、整理、编排、排版、汇编，以及由网站创作的文字、图片等作品的著作权，无论是否明示，均属网站所有。任何自然人、法人及其他组织未经网站书面授权或许可，不得修改、出版、传播、参与传播、销售、制作衍生作品，或以其他任何方式使用整体或部分的网站上的内容，包括但不限于公司信息、产品信息，网站将保留追究其法律责任的权利。</p>
-            <p class="text-indent">10.2 未经网站授权，任何人不得使用网站任何商标、服务标记、标识、域名和其他显著品牌特征的权利。</p>
-            <p class="text-indent">10.3 用户不得以他人资料/信息在本网站进行相关活动。不应当将账号、密码转让或出借予他人使用。若发现用户账号遭他人非法使用，应立即通知网站。</p>
-            <p class="text-indent">10.4 用户同意接受本网站通过电子邮件、网页或其他合法方式向用户发送产品促销或其他相关商业信息。</p>
-            <p class="text-indent">10.5 本网站及本网站所有内容均受《中华人民共和国著作权法》、《中华人民共和国商标法》等的法律保护。用户在本网站上发布的信息不得侵犯任何第三人的知识产权，未经相关权利人之事先书面同意，用户不得以任何方式上传、发布、修改、传播或复制任何受著作权保护的材料、商标或属于其他人的专有信息。</p>
-            <strong>11． 法律声明</strong>
-            <p class="text-indent">11.1 本协议的订立、变更、执行和解释及争议的解决，均应适用中华人民共和国法律。如与本协议有关的某一特定事项缺乏明确法律规定，则应参照通用的国际商业惯例和行业惯例。</p>
-            <p class="text-indent">11.2 因本协议内容或其执行发生争议，双方应友好协商解决；协商不成时，任何一方均可向公司经营所在地的人民法院提起诉讼。</p>
-            <p>本协议的最终解释权和修改权归新加坡新三板网络有限公司所有。</p>
-        </div>
-        <div class="n-close">
-            <a href="javascript:;" class="">
-                <i class="dBtn34Inner">关闭</i>
-            </a>
-        </div>
+</div>
+<div id="serveTermsDialog" class="hide">
+    <h2>新三板在线服务协议</h2>
+    <div class="info">
+        <p>尊敬的用户：</p>
+        <p class="text-indent">
+            新三板在此特别提醒用户认真阅读、充分理解本协议各条款，特别是其中所涉及的服务介绍、服务终止、用户责任等。请用户审慎阅读并选择接受或不接受本协议，除非用户接受本协议所有条款，否则用户无权使用本网站于本协议下所提供的服务。</p>
+        <strong>1．服务协议的确认和接纳</strong>
+        <p class="text-indent">新三板（<a href="#" target="_blank" title="新三板">www.xinsanban.com</a>）的所有权归新加坡新三板网络有限公司所有，用户如需使用网站会员服务，须仔细阅读并严格遵守新三板制定的《新三板在线服务协议》（以下简称“本协议”），完成注册程序和缴纳所需费用之后，才能享受新三板提供的相关服务。
+        </p>
+        <strong>2．服务所需要的设备和其他条件</strong>
+        <p class="text-indent">为使用新三板会员服务，用户必须：</p>
+        <p class="text-indent">2.1 拥有接入互联网的硬件设备和软件工具，包括但不限于计算机、调制解调器、有关软件和设置，或者其它必备的上网装置和进行有关设置。</p>
+        <p class="text-indent">2.2 用户只有同意新三板制订的本协议后才能提请使用新三板的会员业务和进行支付行为。新三板从实际收到用户支付的款项后开始提供服务。</p>
+        <p class="text-indent">2.3 由于业务上或者技术上的障碍，付费用户在完成支付行为后，新三板可能无法及时开通相应服务，但新三板有义务在排除障碍后及时开通服务。</p>
+        <strong>3． 服务介绍</strong>
+        <p class="text-indent">新三板运用自己的技术力量和存储数据为用户提供有偿服务。考虑到会员服务的重要性和安全性，用户需做到如下要求：</p>
+        <p class="text-indent">3.1 在注册时，需提供真实有效的个人邮箱和手机号。</p>
+        <p class="text-indent">3.2 正确填写相关项目信息、资金信息或其他内容。</p>
+        <p class="text-indent">3.3 如个人资料有任何变动，用户有必要及时更新自己的信息。</p>
+        <p class="text-indent">3.4 需同意协议中各项条款且具备确认本协议和接受会员服务的相应民事行为能力。</p>
+        <p class="text-indent">3.5 需支付相应的费用。</p>
+        <p class="text-indent">3.6 如果用户违反上述规定，新三板保留终止或结束该用户使用服务的权利。</p>
+        <strong>4． 服务购买、开通、取消和终止</strong>
+        <p class="text-indent">4.1 用户接受本协议并完成相应程序，缴纳相应服务费用后，即成为服务的合法使用者。</p>
+        <p class="text-indent">4.2 蓄意重复多次购买但不进行付款的行为将被视作恶意购买行为，新三板有权冻结该用户账号并终止所有服务。</p>
+        <p class="text-indent">4.3 服务费用缴纳之后，在任何情况下，都不进行退款或者延期处理。</p>
+        <p class="text-indent">4.4 支付确认是付费用户用选择的支付方法申请结算后，新三板进行的确认。新三板在结算的时候把用户填写的内容全部看作是事实，填写虚假内容的用户不受到法律保护。</p>
+        <p class="text-indent">4.5 新三板在下列情况下，可以限制或终止全部或部分付费服务：</p>
+        <p class="text-indent">4.5.1. 由于付费服务使用设备的维修等工程而导致的不得已情况；</p>
+        <p class="text-indent">4.5.2. 由于停电、设备障碍或用户量激增而导致无法正常提供付费服务;</p>
+        <p class="text-indent">4.5.3. 出现天灾、国家非常状态等不可抗拒的情况；</p>
+        <p class="text-indent">4.5.4. 该用户被举报或列为信誉不良的注册用户；</p>
+        <p class="text-indent">4.5.5. 明显违反用户注册条款中规定的付费用户；</p>
+        <strong>5． 服务协议的完善和修改</strong>
+        <p class="text-indent">新三板保留在必要时对会员服务进行不断完善和修改的权利。新三板会员服务一旦发生变动，将以公告的方式通知用户，为用户提供优质的服务保证。</p>
+        <p class="text-indent">当条款变更后，用户可以作如下选择：</p>
+        <p class="text-indent">5.1 不再继续使用新三板的服务，已收款项不进行退款。</p>
+        <p class="text-indent">5.2 如用户不作出任何表示并继续使用服务，则视为接受条款的变更。</p>
+        <p class="text-indent">5.3 如用户同意条款变更的内容，当发生争议时，以最新的条款为准。</p>
+        <strong>6． 服务保证制度</strong>
+        <p class="text-indent">新三板会努力完善和提升服务质量，对系统的稳定性、防灾害性、用户信息的安全性、快速性等方面做最大努力。</p>
+        <p class="text-indent">
+            由于不可抗力造成新三板无法继续提供服务，新三板不承担责任。“不可抗力”是指新三板不能合理控制、不可预见或即使预见亦无法避免的事件，该事件妨碍、影响或延误新三板为用户提供服务。该事件包括但不限于政府行为、骨干通信线路故障、地震、台风、洪水、火灾及其它天灾、战争或任何其它类似事件。</p>
+        <strong>7． 用户责任</strong>
+        <p class="text-indent">由于用户过错原因导致新三板损失（包括但不限于因此新三板需对第三方承担的损失）需由用户进行赔偿。</p>
+        <strong>8． 保障</strong>
+        <p class="text-indent">用户同意保障和维护新三板的利益，并承诺支付由于用户违反本条款而引起的费用（包括但不限于赔偿费、律师费，因其他人使用用户的帐号和密码而发生的法律和经济责任）。</p>
+        <strong>9． 新三板通知</strong>
+        <p class="text-indent">用户在使用服务的同时，新三板会以公告的方式通知用户条款的变更、服务的升级或其他新三板发布的重要信息。</p>
+        <strong>10． 所有权</strong>
+        <p class="text-indent">10.1
+            网站所有内容的选材、整理、编排、排版、汇编，以及由网站创作的文字、图片等作品的著作权，无论是否明示，均属网站所有。任何自然人、法人及其他组织未经网站书面授权或许可，不得修改、出版、传播、参与传播、销售、制作衍生作品，或以其他任何方式使用整体或部分的网站上的内容，包括但不限于公司信息、产品信息，网站将保留追究其法律责任的权利。</p>
+        <p class="text-indent">10.2 未经网站授权，任何人不得使用网站任何商标、服务标记、标识、域名和其他显著品牌特征的权利。</p>
+        <p class="text-indent">10.3 用户不得以他人资料/信息在本网站进行相关活动。不应当将账号、密码转让或出借予他人使用。若发现用户账号遭他人非法使用，应立即通知网站。</p>
+        <p class="text-indent">10.4 用户同意接受本网站通过电子邮件、网页或其他合法方式向用户发送产品促销或其他相关商业信息。</p>
+        <p class="text-indent">10.5
+            本网站及本网站所有内容均受《中华人民共和国著作权法》、《中华人民共和国商标法》等的法律保护。用户在本网站上发布的信息不得侵犯任何第三人的知识产权，未经相关权利人之事先书面同意，用户不得以任何方式上传、发布、修改、传播或复制任何受著作权保护的材料、商标或属于其他人的专有信息。</p>
+        <strong>11． 法律声明</strong>
+        <p class="text-indent">11.1 本协议的订立、变更、执行和解释及争议的解决，均应适用中华人民共和国法律。如与本协议有关的某一特定事项缺乏明确法律规定，则应参照通用的国际商业惯例和行业惯例。</p>
+        <p class="text-indent">11.2 因本协议内容或其执行发生争议，双方应友好协商解决；协商不成时，任何一方均可向公司经营所在地的人民法院提起诉讼。</p>
+        <p>本协议的最终解释权和修改权归新加坡新三板网络有限公司所有。</p>
     </div>
+    <div class="n-close">
+        <a href="javascript:;" class="">
+            <i class="dBtn34Inner">关闭</i>
+        </a>
+    </div>
+</div>
 </body>
 <script type="text/javascript" src="js/require.js" data-main="js/main"></script>
 
