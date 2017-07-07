@@ -4,7 +4,8 @@ require.config({
         'jquery': 'lib/jquery',
         'validate': 'lib/jquery.validate.min',
         'messages': 'lib/messages_zh.min',
-        'superSlide': 'lib/jquery.SuperSlide'
+        'superSlide': 'lib/jquery.SuperSlide',
+        'lazyload': 'lib/jquery.lazyload.min'
     },
     shim: {
         'validate': {
@@ -18,6 +19,10 @@ require.config({
         'superSlide': {
             deps: ['jquery'],
             exports: 'superSlide'
+        },
+        'lazyload':{
+            deps:['jquery'],
+            exports:'lazyload'
         }
     }
 });
@@ -26,6 +31,15 @@ require(['jquery', 'superSlide'], function() {
     jQuery('.focus').hover(function() { jQuery(this).find('.prev,.next').stop(true, true).fadeTo('show', 0.2) }, function() { jQuery(this).find('.prev,.next').fadeOut() });
     jQuery('.focus').slide({ mainCell: '.pic', effect: 'fold', autoPlay: true, delayTime: 600, trigger: 'click' });
 });
+
+require(['jquery','lazyload'],function(){
+    $("img.lazy").lazyload({
+        placeholder:"../images/loading.gif",
+        effect: "fadeIn",
+    });
+
+});
+
 require(['jquery'], function($) {
     //改变placeholder内容
     var searchStr = [];
@@ -71,61 +85,5 @@ require(['jquery'], function($) {
         $(".sub-menu").hide();
         $(".menu li").removeClass("active");
     })
-        // var sub = $('.sub-menu');
-        // var activeRow;
-        // var activeMenu;
-        // var timer;
-        // var mouseInSub = false;
-        // sub.on('mouseenter',function(e){
-        //             mouseInSub = true;
-        //         }).on('mouseleave',function(){
-        //             mouseInSub = false;
-        //         })
-        // $('.menu-wrapper')
-        // .on('mouseenter',function(e){
-        //     sub.removeClass('hide');
-        // })
-        // .on('mouseleave',function(e){
-        //     sub.addClass('hide');
-        //     if(activeRow){
-        //         activeRow.removeClass('active');
-        //         activeRow = null;
-        //     }
-        //     if(activeMenu){
-        //         activeMenu.addClass('hide');
-        //         activeMenu = null;
-        //     }
-        // })
-        // .on('mouseenter','li',function(e){
-        //     // alert(e.target);
-        //     if(!activeRow){
-        //         activeRow = $(e.target);
-        //         activeRow.addClass('active');
-        //         activeMenu = $('#' + activeRow.data('id'));
-        //         activeMenu.removeClass('hide');
-        //         return;
-        //     }
-        //     if(timer){
-        //         clearTimeout(timer);
-        //     }
-        //     activeRow.removeClass('active');
-        //     activeMenu.addClass('hide');
-        //     activeRow = $(e.target);
-        //     activeRow.addClass('active');
-        //     activeMenu = $('e', activeRow.data('id'));
-        //     activeMenu.removeClass('hide');
-        // })
-        // timer = setTimeout(function(){
-        //     if(mouseInSub){
-        //         return;
-        //     }
-        //     activeRow.removeClass('active');
-        //     activeMenu.addClass('hide');
-        //     activeRow = $(e.target);
-        //     activeRow.addClass('active');
-        //     activeMenu = $('#' + activeRow.data('id'));
-        //     activeMenu.removeClass('hide');
-        //     timer = null;
-        // },300)
 });
 
