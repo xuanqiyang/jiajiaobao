@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="js/skins/default.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/dialog.css">
     <title>Document</title>
 </head>
 
@@ -292,7 +292,7 @@
                     <input type="text" name="mobile" placeholder="手机号码" maxlength="11">
                 </div>
                 <div>
-                    <input type="checkbox" checked="checked">
+                    <input type="checkbox" checked="checked" id="agreeServeTerms">
                     <label>我已阅读并同意<a id="showServeTerms" href="javascript:void(0);">《家教宝服务协议》</a></label>
                 </div>
                 <button class="primary-btn blue-btn" type="submit">提交</button>
@@ -330,8 +330,8 @@
             <a href=""><i class="icon icon-9"></i><span class="icon-desc">注册老师:888888<br>100%资格认证</span></a>
         </div>
         <div class="category">
-            <div class="hd-title">
-                <h2>数万名师 总有你所需</h2>
+            <div class="hd-title ">
+                <h2 class="title-icon-blue">数万名师 总有你所需</h2>
             </div>
             <div class="sub-nav">
                 <h3 class="nav-title icon-10">签约老师</h3>
@@ -650,8 +650,8 @@
         </div>
         <div class="adv-banner"><img class="lazy" data-original="images/adv2.png"></div>
         <div class="category">
-            <div class="hd-title">
-                <h2>最新学员</h2>
+            <div class="hd-title ">
+                <h2 class="title-icon-red">最新学员</h2>
             </div>
             <ul class="item-list-demand">
                 <li class="item">
@@ -746,9 +746,124 @@
                 </li>
             </ul>
         </div>
-        
+        <div class="category">
+            <div class="hd-title ">
+                <h2 class="title-icon-blue">预约流程</h2>
+            </div>
+            <ul class="step">
+                <li class="bg-step1">
+                    <span class="icon-15"></span>
+                    <h4>告知需求</h4>
+                    <p>通过在线客服、或者咨询电话
+                        <br> 等渠道告知我们您的上课需求
+                    </p>
+                </li>
+                <li class="bg-step2">
+                    <span class="icon-16"></span>
+                    <h4>匹配老师</h4>
+                    <p>客服会第一时间与您联系，根
+                        <br> 据您的需求筛选匹配专业老师
+                    </p>
+                </li>
+                <li class="bg-step3">
+                    <span class="icon-17"></span>
+                    <h4>上门授课</h4>
+                    <p>经您的确认后，老师在约定时
+                        <br> 间上门授课
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="category">
+            <div class="hd-title ">
+                <h2 class="title-icon-orange">平台流程</h2>
+            </div>
+            <ul class="process">
+                <li>
+                    <span class="icon-18">
+
+                    </span>
+                    <h4>1.搜索老师</h4>
+                    <p>在种类丰富的课程中，您可以按照多 种条件进行筛选（如课程、价格、地 理位置等），找到心仪的老师。众多 名师，总有一些适合您。
+                    </p>
+                </li>
+                <li>
+                    <span class="icon-19">
+
+                    </span>
+                    <h4>2.购买课时</h4>
+                    <p>查看老师的详细信息，观看其视频介 绍，选择合适的老师并预付课程费用。 每次课程结束，由学生确认后将课时 费在线支付给老师。
+                    </p>
+                </li>
+                <li>
+                    <span class="icon-20">
+
+                    </span>
+                    <h4>3.约课上课</h4>
+                    <p>与老师沟通，进行在线约课，可灵活 选择上课时间、地点和授课方式（在 线视频或线下面授）。首次课程不满 意可全额退费。
+                    </p>
+                </li>
+                <li>
+                    <span class="icon-21">
+
+                    </span>
+                    <h4>4.课程评价</h4>
+                    <p>课程结束，学生对老师和课程进行评 价，帮助老师发现其优势和不足，提 高教学质量。为其他正在寻找老师的 学生或家长提供参考。
+                    </p>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div id="serveTermsDialog" class="hide">
+    <div class="footer">
+        <div class="footer-info container">
+            <dl>
+                <dt>帮助中心</dt>
+                <dd><a>平台流程</a></dd>
+                <dd><a>老师入驻</a></dd>
+                <dd><a>老师帮助</a></dd>
+                <dd><a>学生帮助</a></dd>
+                <dd><a>机构帮助</a></dd>
+            </dl>
+            <dl>
+                <dt>服务支持</dt>
+                <dd>平台保障</dd>
+                <dd>支付问题</dd>
+                <dd>意见回馈</dd>
+                <dd>侵权投诉</dd>
+            </dl>
+            <dl>
+                <dt>关于家教宝</dt>
+                <dd>了解我们</dd>
+                <dd>代理合作</dd>
+                <dd>校园招聘</dd>
+                <dd>社会招聘</dd>
+                <dd>网站条款</dd>
+            </dl>
+            <dl>
+                <dt>关注我们</dt>
+                <dd>官方微信</dd>
+                <dd>联系我们</dd>
+            </dl>
+            <dl>
+                <span class="icon-22"></span>
+                <dt>020-34332718</dt>
+                <dd>周一至周六9:30-18:00</dd>
+            </dl>
+        </div>
+        <div class="footer-copyright container">
+            <p>
+                <a>网站条款</a> <a>活动公告</a> <a>新闻报道</a> <a>申请合作</a>
+                <a>网站地图</a> <a>油画培训</a> <a>绘画培训</a> <a>拉丁舞培训</a> <a>雅思机经</a> <a>Java培训</a>
+            </p>
+            <p>合作伙伴：<a>新加坡新三板</a> <a>新加坡好姆集团</a> <a>广州英语宝</a> <a>醉猫商城</a></p>
+            </p>
+            <p>© Copyright 2017 By Home English - All rights Reserved!粤ICP备15111299号-3
+                广州市好姆教育科技有限公司</p>
+            <p></p>
+            <div class="identi"><a><img class="lazy" src="images/loading.gif" data-original="images/identi_1.png"></a><a><img class="lazy" src="images/loading.gif" data-original="images/identi_2.png"></a><a><img class="lazy" src="images/loading.gif" data-original="images/identi_3.png"></a><a><img class="lazy" src="images/loading.gif" data-original="images/identi_4.png"></a><a><img class="lazy" src="images/loading.gif" data-original="images/identi_5.png"></a></div>
+        </div>
+    </div>
+    <div id="serveTermsDialog" style="display: none;">
         <h2>新三板在线服务协议</h2>
         <div class="info">
             <p>尊敬的用户：</p>
@@ -810,13 +925,7 @@
             <p class="text-indent">11.2 因本协议内容或其执行发生争议，双方应友好协商解决；协商不成时，任何一方均可向公司经营所在地的人民法院提起诉讼。</p>
             <p>本协议的最终解释权和修改权归新加坡新三板网络有限公司所有。</p>
         </div>
-        <div class="n-close">
-            <a href="javascript:;" class="">
-                <i class="dBtn34Inner">关闭</i>
-            </a>
-        </div>
     </div>
 </body>
 <script type="text/javascript" src="js/require.js" data-main="js/main"></script>
-
 </html>

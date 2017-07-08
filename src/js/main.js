@@ -1,11 +1,13 @@
 require.config({
-    baseUrl: 'js',　　　
+    baseUrl: 'js',
+    　　　
     paths: {
         'jquery': 'lib/jquery',
         'validate': 'lib/jquery.validate.min',
         'messages': 'lib/messages_zh.min',
         'superSlide': 'lib/jquery.SuperSlide',
-        'lazyload': 'lib/jquery.lazyload.min'
+        'lazyload': 'lib/jquery.lazyload.min',
+        'art': 'jquery.artDialog'
     },
     shim: {
         'validate': {
@@ -20,9 +22,13 @@ require.config({
             deps: ['jquery'],
             exports: 'superSlide'
         },
-        'lazyload':{
-            deps:['jquery'],
-            exports:'lazyload'
+        'lazyload': {
+            deps: ['jquery'],
+            exports: 'lazyload'
+        },
+        'art': {
+            deps: ['jquery'],
+            exports: 'art'
         }
     }
 });
@@ -32,14 +38,13 @@ require(['jquery', 'superSlide'], function() {
     jQuery('.focus').slide({ mainCell: '.pic', effect: 'fold', autoPlay: true, delayTime: 600, trigger: 'click' });
 });
 
-require(['jquery','lazyload'],function(){
+require(['jquery', 'lazyload'], function() {
     $("img.lazy").lazyload({
-        placeholder:"../images/loading.gif",
+        placeholder: "../images/loading.gif",
         effect: "fadeIn",
     });
 
 });
-
 require(['jquery'], function($) {
     //改变placeholder内容
     var searchStr = [];
@@ -87,3 +92,21 @@ require(['jquery'], function($) {
     })
 });
 
+require(['jquery', 'art'], function(art) {
+    var showServeTerms = document.getElementById("showServeTerms");
+    var serveTermsDialog = document.getElementById("serveTermsDialog");
+    showServeTerms.addEventListener("click", function() {
+        art.dialog({
+            title: "家教宝服务协议",
+            lock: true,
+            fixed: true,
+            content: document.getElementById("serveTermsDialog"),
+            okVal:'同意',
+            ok:function(){
+                document.getElementById("agreeServeTerms").checked = 'checked';
+            },
+            cancelVal:'关闭',
+            cancel:true
+        }).show()
+    })
+})
