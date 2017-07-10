@@ -455,7 +455,7 @@ body {
     opacity: 0.5 !important;
 }
 
-.nav-link {
+.nav-link-1 {
     margin: 20px 0;
     .icon {
         width: 50px;
@@ -475,6 +475,19 @@ body {
         color: #333;
         width: 33%;
         display: inline-block;
+    }
+}
+
+.nav-link-2 {
+    overflow: hidden;
+    a {
+        text-align: center;
+        float: left;
+        width: 238px;
+        padding: 35px;
+    }
+    span {
+        font-size: 75px;
     }
 }
 
@@ -694,7 +707,7 @@ body {
         float: left;
         width: 363px;
         height: 233px;
-        margin-right: 50px;
+        margin-right: 35px;
         text-align: center;
         &:last-child {
             margin-right: 0;
@@ -743,6 +756,159 @@ body {
         }
         p {
             color: #666;
+        }
+    }
+}
+
+.examples {
+    overflow: hidden;
+    margin: 20px 0;
+    .item {
+        float: left;
+        width: 278px;
+        border: 1px solid #eee;
+        margin-right: 17px;
+        .item-top {
+            height: 145px;
+            width: 278px;
+        }
+        .item-bottom {
+            background-color: #eee;
+            height: 280px;
+            padding: 15px 8px;
+            line-height: 1.5em;
+            h3 {
+                font-size: 16px;
+            }
+            strong {
+                font-size: 15px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.enter {
+    margin: 20px 0;
+    padding: 32px;
+    h2 {
+        color: #0095FC;
+        font-size: 18px;
+        line-height: 1.5em;
+        margin-bottom: 20px;
+    }
+    &:nth-child(even) {
+        background-color: #ECF6FF;
+    }
+    .btn {
+        padding: 8px 25px;
+        color: #fff;
+    }
+}
+
+.enter-step {
+    img {
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 18px;
+        color: #666;
+    }
+}
+.enter-process{
+    overflow: hidden;
+    li{
+        float: left;
+        width:370px;
+        padding:30px;
+        text-align: center;
+        span{
+            font-size: 75px;
+        }
+        p{
+            font-size: 15px;
+
+        }
+        h4{
+            font-size:17px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+    }
+}
+.FQA{
+    li{
+        margin:20px 0;
+        h4{
+            font-size: 18px;
+        }
+    }
+}
+.who {
+    overflow: hidden;
+    li {
+        float: left;
+        width: 33.33%;
+        text-align: center;
+        img {
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+}
+
+.why {
+    background-image: url("../images/why-bg.png");
+    background-repeat: no-repeat;
+    height: 420px;
+    h4 {
+        font-size: 16px;
+        color: $blue;
+    }
+    p {
+        color: #666;
+    }
+    li {
+        width: 470px;
+    }
+    .why-1 {
+        margin-left: 425px;
+    }
+    .why-2 {
+        margin-left: 520px;
+        margin-top: 65px;
+    }
+    .why-3 {
+        margin-left: 520px;
+        margin-top: 60px;
+    }
+    .why-4 {
+        margin-left: 420px;
+        margin-top: 55px;
+    }
+}
+
+.tobe {
+    border: 2px dashed #333;
+    border-radius: 15px;
+    margin: 0 200px;
+    padding: 20px;
+    display: inline-block;
+    overflow: hidden;
+    ul {
+        float: left;
+        margin-right: 20px;
+        color: #666;
+        li {
+            line-height: 1.5em;
+            font-size: 16px;
+        }
+        img {
+            float: left;
         }
     }
 }
@@ -797,12 +963,14 @@ body {
         }
     }
 }
-#showServeTerms{
-    color:#fff;
-    &:hover{
-        color:$blue;
+
+#showServeTerms {
+    color: #fff;
+    &:hover {
+        color: $blue;
     }
 }
+
 #serveTermsDialog {
     h2 {
         font: bold 18px/30px Microsoft Yahei, Simhei, Simsun;
@@ -815,16 +983,18 @@ body {
         line-height: 22px;
     }
 }
-.aui_buttons{
+
+.aui_buttons {
     text-align: center;
-    button{
+    button {
         border-radius: 3px;
         border: none;
     }
-    .aui_state_highlight{
+    .aui_state_highlight {
         background-color: $blue;
     }
 }
+
 .clear {
     clear: both;
     display: block;

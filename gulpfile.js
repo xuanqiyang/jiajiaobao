@@ -106,7 +106,7 @@ gulp.task('cleanfile', function() {
     gulp.src(['dist/images', 'dist/css', 'dist/js'], { read: false })
         .pipe(clean());
 });
-gulp.task('build',['watch','sync','html','sass','js','images','server']);
+gulp.task('build',['sync','watch','html','sass','js','images','server']);
 // 默认任务 清空图片、样式、js并重建 运行语句 gulp
 gulp.task('default', ['cleanfile'], function() {
     gulp.start('build');
