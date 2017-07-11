@@ -33,19 +33,14 @@ require.config({
     }
 });
 
-require(['jquery', 'superSlide'], function() {
+require(['jquery', 'lazyload', 'superSlide', 'art'], function($) {
     jQuery('.focus').hover(function() { jQuery(this).find('.prev,.next').stop(true, true).fadeTo('show', 0.2) }, function() { jQuery(this).find('.prev,.next').fadeOut() });
     jQuery('.focus').slide({ mainCell: '.pic', effect: 'fold', autoPlay: true, delayTime: 600, trigger: 'click' });
-});
 
-require(['jquery', 'lazyload'], function() {
     $("img.lazy").lazyload({
         placeholder: "../images/loading.gif",
         effect: "fadeIn",
     });
-
-});
-require(['jquery'], function($) {
     //改变placeholder内容
     var searchStr = [];
     var $searchForm = $('.search-form');
@@ -66,7 +61,7 @@ require(['jquery'], function($) {
         }
         $sibPlaceholder.click(function() {
             $that.trigger('focus');
-        })
+        });
         $(this).focus(function() {
             $sibPlaceholder.hide();
         }).blur(function() {
@@ -77,22 +72,33 @@ require(['jquery'], function($) {
             }
         });
     });
-    $(".menu li").mouseover(function() {
+    var $menuLi = $(".menu li"),
+        $menu = $(".menu"),
+        $subMenu = $(".sub-menu"),
+        $subMenuCnt = $(".sub-menu-content");
+    if ($(".folder").length > 0) {
+        $menu.css("display", "none");
+        $(".menu-title").mouseover(function() {
+            $(".menu").show();
+        })
+        $(".all-couser").mouseleave(function() {
+            $(".menu").hide();
+            $menuLi.removeClass("active");
+        });
+    }
+    $menuLi.mouseover(function() {
         var n = $(this).index();
-        $(".menu li").removeClass("active");
+        $menuLi.removeClass("active");
         $(this).addClass("active");
-        $(".sub-menu .sub-menu-content").hide();
-        $(".sub-menu").show();
-        $(".sub-menu .sub-menu-content").eq(n).show();
-    })
+        $subMenuCnt.hide();
+        $subMenu.show();
+        $subMenuCnt.eq(n).show();
+    });
     $(".menu-wrapper").mouseleave(function() {
-        $(".sub-menu .sub-menu-content").hide();
-        $(".sub-menu").hide();
-        $(".menu li").removeClass("active");
-    })
-});
-
-require(['jquery', 'art'], function(art) {
+        $subMenuCnt.hide();
+        $subMenu.hide();
+        $menuLi.removeClass("active");
+    });
     var showServeTerms = document.getElementById("showServeTerms");
     var serveTermsDialog = document.getElementById("serveTermsDialog");
     showServeTerms.addEventListener("click", function() {
@@ -101,12 +107,12 @@ require(['jquery', 'art'], function(art) {
             lock: true,
             fixed: true,
             content: document.getElementById("serveTermsDialog"),
-            okVal:'同意',
-            ok:function(){
+            okVal: '同意',
+            ok: function() {
                 document.getElementById("agreeServeTerms").checked = 'checked';
             },
-            cancelVal:'关闭',
-            cancel:true
-        }).show()
-    })
-})
+            cancelVal: '关闭',
+            cancel: true
+        }).show();
+    });
+});
