@@ -32,8 +32,63 @@ require.config({
         }
     }
 });
+require(['jquery', 'art'], function($, art) {
 
-require(['jquery', 'lazyload', 'superSlide', 'art'], function($) {
+    var showServeTerms = document.getElementById("showServeTerms");
+    var serveTermsDialog = document.getElementById("serveTermsDialog");
+    var getCode = document.getElementById("getCode");
+    var cellphone = document.getElementById("cellphone");
+    var time = 60;
+    var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+    if (getCode) {
+        getCode.onclick = function(e) {
+            if (cellphone.value.length == 11 && mobile.test(cellphone.value)) {
+                timer(this);
+            } else {
+                art.dialog({
+                    title: "登录提示",
+                    content: "请填写手机号码!",
+                    lock: true,
+                    fixed: true
+                }).show();
+            }
+        };
+    }
+
+    if (showServeTerms) {
+        showServeTerms.onclick = function() {
+            art.dialog({
+                title: "家教宝服务协议",
+                lock: true,
+                fixed: true,
+                content: document.getElementById("serveTermsDialog"),
+                okVal: '同意',
+                ok: function() {
+                    document.getElementById("agreeServeTerms").checked = 'checked';
+                },
+                cancelVal: '关闭',
+                cancel: true
+            }).show();
+        };
+    }
+
+    function timer(o) {
+        if (time == 0) {
+            o.removeAttribute('disabled');
+            o.innerText = "获取验证码";
+            time = 60;
+        } else {
+            o.setAttribute("disabled", true);
+            o.innerText = time;
+            time--;
+            setTimeout(function() {
+                timer(o);
+            }, 1000)
+        }
+    }
+});
+
+require(['jquery', 'lazyload', 'superSlide'], function($) {
     jQuery('.focus').hover(function() { jQuery(this).find('.prev,.next').stop(true, true).fadeTo('show', 0.2) }, function() { jQuery(this).find('.prev,.next').fadeOut() });
     jQuery('.focus').slide({ mainCell: '.pic', effect: 'fold', autoPlay: true, delayTime: 600, trigger: 'click' });
 
@@ -99,20 +154,5 @@ require(['jquery', 'lazyload', 'superSlide', 'art'], function($) {
         $subMenu.hide();
         $menuLi.removeClass("active");
     });
-    var showServeTerms = document.getElementById("showServeTerms");
-    var serveTermsDialog = document.getElementById("serveTermsDialog");
-    showServeTerms.addEventListener("click", function() {
-        art.dialog({
-            title: "家教宝服务协议",
-            lock: true,
-            fixed: true,
-            content: document.getElementById("serveTermsDialog"),
-            okVal: '同意',
-            ok: function() {
-                document.getElementById("agreeServeTerms").checked = 'checked';
-            },
-            cancelVal: '关闭',
-            cancel: true
-        }).show();
-    });
+
 });

@@ -92,6 +92,23 @@ body {
     }
 }
 
+.login-header {
+    background: #fff;
+    border-bottom: 1px solid #DEDEDE;
+    padding: 10px 0;
+    ul {
+        overflow: hidden;
+        li {
+            margin-right: 10px;
+            line-height: 74px;
+            float: left;
+            a {
+                color: $blue;
+            }
+        }
+    }
+}
+
 .search-tab {
     overflow: hidden;
     .tab-item {
@@ -280,10 +297,10 @@ body {
             display: block;
             font-size: 17px;
         }
-        .folder{
+        .folder {
             margin-left: 120px;
-            &:before{
-                color:#fff;
+            &:before {
+                color: #fff;
             }
         }
     }
@@ -380,32 +397,91 @@ body {
 .find-teacher {
     z-index: 10;
     position: absolute;
+    .primary-btn {
+        width: 100%;
+    }
     form {
-        #agreeServeTerms {
-            vertical-align: middle;
-        }
         height: 275px;
         position: absolute;
-        padding: 15px 15px 25px 15px;
+        padding: 15px;
         font-family: "Microsoft YaHei";
         width: 220px;
         h4 {
             text-align: center;
             font-size: 22px;
         }
-        .fg {
+        label {
+            font-size: 12px;
+        }
+    }
+}
+
+.form-pannel {
+    label.fg {
+        input {
             height: 35px;
             line-height: 35px;
             padding-left: 10px;
             margin-bottom: 13px;
             background: #fff;
         }
-        .primary-btn {
-            width: 100%;
-        }
-        label {
-            font-size: 12px;
-        }
+    }
+}
+
+.login-form {
+    margin: 50px;
+    float: left;
+    h4 {
+        font-size: 22px;
+        color: $blue;
+        margin-bottom: 13px;
+    }
+    span {
+        color: #666;
+        width: 5em;
+        text-align: right;
+    }
+    padding: 20px;
+    width: 450px;
+    background-color: #fff;
+    label.fg {
+        font-size: 16px;
+        display: flex;
+    }
+    input[type="text"],
+    input[type="password"] {
+        border: 1px solid #eee;
+        font-size: 14px;
+        flex: 1;
+    }
+    .submit-btn {
+        width: 150px;
+        font-size: 18px;
+    }
+    #getCode {
+        width: 115px;
+    }
+}
+
+#agreeServeTerms {
+    vertical-align: middle;
+}
+
+.wechat {
+    margin-top: 200px;
+    float: left;
+    width: 100px;
+    text-align: center;
+}
+
+.fg {
+    height: 35px;
+    line-height: 35px;
+    margin-bottom: 13px;
+    background: #fff;
+    input[type="text"],
+    input[type="password"] {
+        padding-left: 10px;
     }
 }
 
@@ -512,9 +588,6 @@ body {
     margin: 0 70px;
     .find-teacher form {
         background-color: #D6E5ED;
-        #showServeTerms {
-            color: #333;
-        }
     }
 }
 
@@ -659,9 +732,9 @@ body {
         }
     }
 }
+
 .nav-title {
     line-height: 70px;
-    float: left;
     font-size: 18px;
     margin-right: 100px;
     &:before {
@@ -670,13 +743,13 @@ body {
         margin-right: 10px;
     }
 }
+
 .sub-nav {
     border-top: 1px solid #eee;
     line-height: 70px;
     overflow: hidden;
     ul {
         overflow: hidden;
-        float: left;
     }
     .icon-10 {
         &:before {
@@ -703,7 +776,6 @@ body {
         float: right;
         color: #333;
     }
-
     .nav-item {
         float: left;
         margin-right: 15px;
@@ -727,7 +799,7 @@ body {
     background-color: $green;
     height: 300px;
     text-align: center;
-    margin: 25px 15px 0 0;
+    margin: 25px 22px 0 0;
     float: left;
 }
 
@@ -766,19 +838,31 @@ body {
     }
 }
 
+.bg-login {
+    background-image: url("../images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 73vh;
+}
+
 .item-list {
     float: left;
     margin: 25px 0;
     overflow: hidden;
     .item {
-        border: 1px solid #eee;
         width: 220px;
-        text-align: center;
         height: 300px;
+        border: 1px solid #eee;
+        margin-right: 22px;
+        margin-bottom: 20px;
         float: left;
-        margin-right: 15px;
+        text-align: center;
         color: #333;
         &:last-child {
+            margin-right: 0;
+        }
+        &:nth-child(5n) {
             margin-right: 0;
         }
         .item-top {
@@ -1124,9 +1208,7 @@ body {
 #showServeTerms {
     color: #fff;
     font-size: 12px;
-    &:hover {
-        color: $blue;
-    }
+    color: $blue;
 }
 
 #serveTermsDialog {
@@ -1159,12 +1241,17 @@ body {
 }
 
 .primary-btn {
+    cursor: pointer;
     height: 35px;
     line-height: 35px;
     text-align: center;
     color: #fff;
     &:before {
         color: #fff;
+    }
+    &:active,
+    &:hover {
+        box-shadow: 3px 3px 8px rgba(70, 70, 70, .2) inset, -3px -3px 8px rgba(70, 70, 70, .2) inset;
     }
 }
 
@@ -1186,6 +1273,10 @@ body {
 
 .pull-left {
     float: left;
+}
+
+.pull-right {
+    float: right;
 }
 
 .hide {
