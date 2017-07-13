@@ -33,13 +33,19 @@ require.config({
     }
 });
 require(['jquery', 'art'], function($, art) {
-
     var showServeTerms = document.getElementById("showServeTerms");
     var serveTermsDialog = document.getElementById("serveTermsDialog");
     var getCode = document.getElementById("getCode");
     var cellphone = document.getElementById("cellphone");
     var time = 60;
     var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+    var $formTab = $(".form-tab label");
+    var $formBody = $(".form-body");
+    $formTab.bind('click', function(event) {
+        $(this).index() ? $formBody[0].action = "http://www.baidu.com/" : $formBody[0].action = "http://www.google.com/";
+        $(this).addClass('active').siblings('label').removeClass('active');
+    });
+
     if (getCode) {
         getCode.onclick = function(e) {
             if (cellphone.value.length == 11 && mobile.test(cellphone.value)) {

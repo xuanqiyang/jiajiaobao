@@ -6,7 +6,7 @@ $orange:#EEA944;
 $green:#61BFA7;
 $pink:#D87DB8;
 .bg-blue {
-    background-color: #0095FC;
+    // background-color: #0095FC;
 }
 
 .bg-red {
@@ -400,6 +400,10 @@ body {
     .primary-btn {
         width: 100%;
     }
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+    }
     form {
         height: 275px;
         position: absolute;
@@ -416,21 +420,45 @@ body {
     }
 }
 
+.fg {
+    height: 35px;
+    line-height: 35px;
+    margin-bottom: 13px;
+    background: #fff;
+    input {
+        line-height: 35px;
+        height: 35px;
+        padding-left: 10px;
+    }
+}
+
 .form-pannel {
-    label.fg {
-        input {
-            height: 35px;
-            line-height: 35px;
-            padding-left: 10px;
-            margin-bottom: 13px;
-            background: #fff;
-        }
+    padding: 20px;
+}
+
+.form-tab {
+    font-size: 18px;
+    height: 50px;
+    line-height: 50px;
+    label {
+        text-align: center;
+        width: 50%;
+        float: left;
+        background-color: #eee;
+        color: #333;
+        cursor: pointer;
+    }
+    .active {
+        background-color: #fff;
+        color: $blue;
     }
 }
 
 .login-form {
+    border: 1px solid #eee;
     margin: 50px;
-    float: left;
+    width: 420px;
+    background-color: #fff;
     h4 {
         font-size: 22px;
         color: $blue;
@@ -441,26 +469,37 @@ body {
         width: 5em;
         text-align: right;
     }
-    padding: 20px;
-    width: 450px;
-    background-color: #fff;
-    label.fg {
-        font-size: 16px;
-        display: flex;
-    }
     input[type="text"],
     input[type="password"] {
         border: 1px solid #eee;
         font-size: 14px;
         flex: 1;
     }
-    .submit-btn {
-        width: 150px;
-        font-size: 18px;
+    a {
+        color: $blue;
+    }
+    .fg {
+        font-size: 16px;
+        display: flex;
+    }
+    .check {
+        height: 35px;
+        line-height: 35px;
     }
     #getCode {
         width: 115px;
     }
+    .submit-btn {
+        width: 150px;
+        font-size: 18px;
+    }
+}
+
+.login-banner {
+    margin: 50px;
+    float: left;
+    width: 530px;
+    height: 313px;
 }
 
 #agreeServeTerms {
@@ -472,17 +511,6 @@ body {
     float: left;
     width: 100px;
     text-align: center;
-}
-
-.fg {
-    height: 35px;
-    line-height: 35px;
-    margin-bottom: 13px;
-    background: #fff;
-    input[type="text"],
-    input[type="password"] {
-        padding-left: 10px;
-    }
 }
 
 .focus {
@@ -698,16 +726,15 @@ body {
         border-left-color: $orange !important;
     }
     .cate-title {
-        line-height: 40px;
-        height: 40px;
         h4 {
-            text-indent: 2em;
-            font-size: 16px;
-            color: #fff;
+            padding: 5px 23px;
+            font-size: 18px;
+            color: #666;
+            border-left: 3px solid $blue;
         }
     }
     .article {
-        padding: 10px 20px;
+        padding: 20px 10px;
         color: #333;
         p {
             line-height: 30px;
@@ -742,6 +769,26 @@ body {
         vertical-align: middle;
         margin-right: 10px;
     }
+    &.icon-10 {
+        &:before {
+            color: $red;
+        }
+    }
+    &.icon-12 {
+        &:before {
+            color: $orange;
+        }
+    }
+    &.icon-13 {
+        &:before {
+            color: $green;
+        }
+    }
+    &.icon-14 {
+        &:before {
+            color: $pink;
+        }
+    }
 }
 
 .sub-nav {
@@ -750,26 +797,6 @@ body {
     overflow: hidden;
     ul {
         overflow: hidden;
-    }
-    .icon-10 {
-        &:before {
-            color: $red;
-        }
-    }
-    .icon-12 {
-        &:before {
-            color: $orange;
-        }
-    }
-    .icon-13 {
-        &:before {
-            color: $green;
-        }
-    }
-    .icon-14 {
-        &:before {
-            color: $pink;
-        }
     }
     .more {
         margin-right: 30px;
@@ -1224,6 +1251,40 @@ body {
     }
 }
 
+.regist-box {
+    overflow: hidden;
+    height: 220px;
+    margin: 100px auto;
+    li {
+        width: 400px;
+        float: left;
+        margin-left: 140px;
+        position: relative;
+        p {
+            font-size: 20px;
+            color: #666;
+        }
+        strong {
+            font-size: 24px;
+            display: block;
+            color: #666;
+            margin-top: 60px;
+            margin-bottom: 10px;
+        }
+        .primary-btn {
+            width: 200px;
+            font-size: 20px;
+            height: 50px;
+            line-height: 50px;
+        }
+        &>img {
+            position: absolute;
+            top: 0;
+            left: 190px;
+        }
+    }
+}
+
 .aui_buttons {
     text-align: center;
     button {
@@ -1238,6 +1299,17 @@ body {
 .clear {
     clear: both;
     display: block;
+}
+
+.clearfix:after {
+    /*最简方式*/
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
 }
 
 .primary-btn {
@@ -1261,6 +1333,10 @@ body {
 
 .btn-radius {
     border-radius: 5px;
+}
+
+.large-btn {
+    width: 100% !important;
 }
 
 .blue-btn {

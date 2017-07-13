@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="js/skins/default.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>家教宝首页</title>
 </head>
@@ -63,48 +62,29 @@
             </div>
         </div>
     </div>
-    <div class="content bg-login">
-        <div class="container">
-            <form class="login-form form-pannel pull-left">
-                <h4>老师注册</h4>
-                <label class="fg">
-                    <span>手机号码：</span>
-                    <input type="text" name="" placeholder="请输入手机号码" id="cellphone">
-                </label>
-                <label class="fg">
-                    <span>验证码：</span>
-                    <input type="text" name="" placeholder="请输入验证码">
-                    <button class="primary-btn blue-btn" type="button" id="getCode">获取验证码</button>
-                </label>
-                <label class="fg">
-                    <span>邮箱：</span>
-                    <input type="text" name="" placeholder="请输入邮箱地址">
-                </label>
-                <label class="fg">
-                    <span>设置密码：</span>
-                    <input type="password" name="" placeholder="请设置密码">
-                </label>
-                <label class="fg">
-                    <span>确认密码：</span>
-                    <input type="password" name="" placeholder="请再次输入密码">
-                </label>
-                <label class="fg">
-                    <span></span>
-                    <input type="checkbox" checked="checked" id="agreeServeTerms">我已阅读并同意<a id="showServeTerms" href="javascript:void(0);">《家教宝服务协议》</a>
-                </label>
-                <label class="fg"><span></span>
-                    <button class="primary-btn blue-btn submit-btn" type="submit" name="" value="">
-                        提交注册
-                    </button>
-                </label>
-            </form>
-            <div class="wechat">
-                <img src="images/wechat.png">
-                <p>扫描二维码
-                    <br>关注微信公众号</p>
-            </div>
-            <div class="clear"></div>
-        </div>
+    <div class="content">
+        <ul class="container regist-box">
+            <li class="regist-student">
+                <a href="regist_teacher.html">
+                    <p>“hi，我是小黄，上班族，
+                        <br> 最近很想学摄影...”
+                    </p>
+                    <strong>找到适合你的老师</strong>
+                    <button type="button" class="blue-btn primary-btn">学生注册</button>
+                </a>
+                <img src="images/student.png">
+            </li>
+            <li class="regist-teacher">
+                <a href="regist_teacher.html">
+                    <p>“hi，我是lemon老师，
+                    <br>快加入家教宝吧...”
+                        </p>
+                        <strong>开始你的教学生涯</strong>
+                        <button type="button" class="blue-btn primary-btn">老师注册</button>
+                </a>
+                <img src="images/teacher.png">
+            </li>
+        </ul>
     </div>
     <div class="footer">
         <div class="footer-copyright container">
