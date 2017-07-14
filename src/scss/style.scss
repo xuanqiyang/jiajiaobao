@@ -6,7 +6,7 @@ $orange:#EEA944;
 $green:#61BFA7;
 $pink:#D87DB8;
 .bg-blue {
-    // background-color: #0095FC;
+    background-color: #0095FC;
 }
 
 .bg-red {
@@ -602,13 +602,19 @@ body {
     }
 }
 
-.info-head {
+.info-box {
     background-color: #EDF5FA;
     position: relative;
-    height: 400px;
     overflow: hidden;
     padding: 30px 0;
     color: #333;
+}
+
+.portrait {
+    border: 5px solid #fff;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
 }
 
 .info-right {
@@ -632,16 +638,18 @@ body {
             margin-left: 20px;
         }
     }
-    .mark {
-        display: inline-block;
-        margin-bottom: 10px;
-    }
     .introduct {
         margin-bottom: 10px;
     }
     p {
         line-height: 1.5em;
     }
+}
+
+.mark {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 .info-left {
@@ -663,6 +671,85 @@ body {
             span {
                 display: block;
             }
+        }
+    }
+}
+
+.search-list {
+    .item {
+        color: #333;
+        overflow: hidden;
+        width: 900px;
+        padding: 40px;
+        border: 1px solid #eee;
+        &:hover{
+            border: 1px solid $blue;
+            background-color: #EDF5FA;
+        }
+        a {
+            color: #333;
+        }
+        p {
+            font-size: 14px;
+            line-height: 1.5em;
+            padding: 5px 0;
+        }
+        .item-left {
+            float: left;
+            text-align: center;
+            margin-right: 30px;
+        }
+        .item-right {
+            float: left;
+            width: 580px;
+        }
+    }
+}
+
+.pagenavi{
+    margin: 40px;
+}
+.pagenavi a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    line-height:40px;
+    background-color:#fff;
+    border-radius: 3px;
+    border: 1px solid #949494;
+    font-size: 14px;
+    text-align: center;
+}
+.pagenavi a:hover{
+    color: #fff;
+    background: #EB4645;
+    border: 1px solid #EB4645;
+}
+.pagenavi a.current{
+    color: #fff;
+    background: #EB4645;
+    border: 1px solid #EB4645;
+}
+
+.order-process {
+    overflow: hidden;
+    color: $blue;
+    &>* {
+        float: left;
+    }
+    font-size: 26px;
+    dt {
+        vertical-align: bottom;
+        line-height: 45px;
+    }
+    dd {
+        line-height: 40px;
+        vertical-align: middle;
+        margin-left: 70px;
+        &:before {
+            font-size: 40px;
+            margin-right: 10px;
+            vertical-align: middle;
         }
     }
 }
@@ -725,8 +812,14 @@ body {
     .title-icon-orange {
         border-left-color: $orange !important;
     }
+    .title-icon-pink {
+        border-left-color: $pink !important;
+    }
+    .title-icon-green {
+        border-left-color: $green !important;
+    }
     .cate-title {
-        h4 {
+        h2 {
             padding: 5px 23px;
             font-size: 18px;
             color: #666;
@@ -738,6 +831,14 @@ body {
         color: #333;
         p {
             line-height: 30px;
+        }
+        .apply {
+            border: 1px solid $blue;
+            width: 200px;
+            line-height: 30px;
+            text-align: center;
+            display: block;
+            color: $blue;
         }
     }
     .order-table {
@@ -757,6 +858,39 @@ body {
             font-weight: bold;
             color: #333;
         }
+    }
+}
+
+.selector {
+    padding: 20px 0;
+    border-bottom: 1px solid $blue;
+    .option dl {
+        overflow: hidden;
+        font-size: 15px;
+        color: #333;
+    }
+    .option dt,
+    .option dd {
+        float: left;
+    }
+    .option dt {
+        margin: 10px 22px 10px 0;
+        display: inline-block;
+        max-width: 80px;
+    }
+    .option dd {
+        max-width: 1010px;
+    }
+    .option dd a {
+        white-space: nowrap;
+        margin: 10px 22px 10px 0;
+        display: inline-block;
+        &:hover {
+            color: $blue;
+        }
+    }
+    .active {
+        color: $blue;
     }
 }
 
@@ -806,12 +940,9 @@ body {
     .nav-item {
         float: left;
         margin-right: 15px;
-        // vertical-align: bottom;
         a {
-            // height:40px;
             color: #333;
             width: 70px;
-            // line-height: 40px;
             text-align: center;
             display: inline-block;
         }
