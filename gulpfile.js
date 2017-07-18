@@ -25,23 +25,33 @@ gulp.task('server',function(){
 	});
 });
 
-// gulp.tack('sprite',function(){
-// 	var cssSrc = 'src/scss/*',
-//       cssDst = 'dist/css';
-// 	var spriteData = gulp.src('images/*.png').pipe(sprite({
-// 			imgName:'sprite.png',
-// 			cssName:'sprite.scss',
-// 			cssFormat:'scss'
-// 		}));
-// 	return spriteData.pipe(gulp.dest(cssDst));
-// })
+// 监听任务 运行语句 gulp watch
+gulp.task('watch', function() {
+    // 监听html
+    gulp.watch('src/**/*.html', function() {
+        gulp.run('html');
+    }).on("change", reload);
+    // 监听css
+    gulp.watch('src/scss/*', function() {
+        gulp.run('sass');
+
+    }).on("change", reload);
+    // 监听js
+    gulp.watch('src/js/*.js', function() {
+        gulp.run('js');
+    }).on("change", reload);
+    // 监听images
+    gulp.watch('src/images/**', function() {
+        gulp.run('images');
+    }).on("change", reload);
+});
 
 //HTML处理
 gulp.task('html', function() {
     var htmlSrc = 'src/**/*.html',
         htmlDst = 'dist';
 
-    gulp.src(htmlSrc)
+    return gulp.src(htmlSrc)
         .pipe(changed(htmlDst))
         .pipe(plumber())
         .pipe(gulp.dest('dist'))
@@ -52,7 +62,7 @@ gulp.task('sass', function() {
     var cssSrc = 'src/scss/*',
         cssDst = 'dist/css';
 
-    gulp.src(cssSrc)
+    return gulp.src(cssSrc)
         .pipe(changed(cssDst))
         .pipe(plumber())
         .pipe(sass({ style: 'expanded' }))
@@ -68,7 +78,7 @@ gulp.task('images', function() {
     var imgSrc = 'src/images/**',
         imgDst = 'dist/images';
 
-    gulp.src(imgSrc)
+    return gulp.src(imgSrc)
         .pipe(changed(imgDst))
         .pipe(plumber())
         .pipe(imagemin())
@@ -81,7 +91,7 @@ gulp.task('js', function() {
     var jsSrc = 'src/js/**/*.js',
         jsDst = 'dist/js';
 
-    gulp.src(jsSrc)
+    return gulp.src(jsSrc)
         .pipe(changed(jsDst))
         .pipe(plumber())
         .pipe(jshint())
@@ -96,37 +106,28 @@ gulp.task('js', function() {
 
 //同步文件删除添加操作
 gulp.task('sync',function(){
-    gulp.watch(['src/**'],function(){
+    return gulp.watch(['src/**'],function(){
         fileSync('src','dist',{recursive:false});
     }).on("change",reload);
 });
 
 // 清空图片、样式、js
 gulp.task('cleanfile', function() {
-    gulp.src(['dist/images', 'dist/css', 'dist/js'], { read: false })
+    return gulp.src(['dist/images', 'dist/css', 'dist/js'], { read: false })
         .pipe(clean());
 });
-gulp.task('build',['sync','watch','html','sass','js','images','server']);
+gulp.task('build',['sync','html','sass','js','images']);
 // 默认任务 清空图片、样式、js并重建 运行语句 gulp
 gulp.task('default', ['cleanfile'], function() {
-    gulp.start('build');
+    return gulp.start('build','watch','server');
 });
-// 监听任务 运行语句 gulp watch
-gulp.task('watch', function() {
-    // 监听html
-    gulp.watch('src/**/*.html', function() {
-        gulp.run('html');
-    }).on("change", reload);
-    // 监听css
-    gulp.watch('src/scss/*', function() {
-        gulp.run('sass');
-    }).on("change", reload);
-    // 监听js
-    gulp.watch('src/js/*.js', function() {
-        gulp.run('js');
-    }).on("change", reload);
-    // 监听images
-    gulp.watch('src/images/**', function() {
-        gulp.run('images');
-    }).on("change", reload);
-});
+// gulp.tack('sprite',function(){
+//  var cssSrc = 'src/scss/*',
+//       cssDst = 'dist/css';
+//  var spriteData = gulp.src('images/*.png').pipe(sprite({
+//          imgName:'sprite.png',
+//          cssName:'sprite.scss',
+//          cssFormat:'scss'
+//      }));
+//  return spriteData.pipe(gulp.dest(cssDst));
+// })

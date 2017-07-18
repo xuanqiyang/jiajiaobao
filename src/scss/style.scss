@@ -395,8 +395,6 @@ body {
 }
 
 .find-teacher {
-    z-index: 10;
-    position: absolute;
     .primary-btn {
         width: 100%;
     }
@@ -406,7 +404,6 @@ body {
     }
     form {
         height: 275px;
-        position: absolute;
         padding: 15px;
         font-family: "Microsoft YaHei";
         width: 220px;
@@ -514,7 +511,12 @@ body {
 }
 
 .focus {
+    .find-teacher{
+        z-index: 10;
+        position: relative;
+    }
     .find-teacher form {
+        position: absolute;
         color: #fff;
         background: rgba(0, 0, 0, .6);
         right: 0;
@@ -618,8 +620,8 @@ body {
 }
 
 .info-right {
+    margin: 0 50px;
     float: left;
-    margin: 0 70px;
     .find-teacher form {
         background-color: #D6E5ED;
     }
@@ -676,6 +678,7 @@ body {
 }
 
 .search-list {
+    float: left;
     .item {
         color: #333;
         overflow: hidden;
@@ -705,7 +708,13 @@ body {
         }
     }
 }
-
+.reservation{
+    float: left;
+    background-color: #d6e5ed;
+    position: relative;
+    left: 30px;
+    top: 30px;
+}
 .pagenavi{
     margin: 40px;
 }
@@ -805,18 +814,33 @@ body {
     }
     .title-icon-red {
         border-left-color: $red !important;
+        &:before{
+            color: $red;
+        }
     }
     .title-icon-blue {
         border-left-color: $blue !important;
+        &:before{
+            color: $blue;
+        }
     }
     .title-icon-orange {
         border-left-color: $orange !important;
+        &:before{
+            color: $orange;
+        }
     }
     .title-icon-pink {
         border-left-color: $pink !important;
+        &:before{
+            color: $pink;
+        }
     }
     .title-icon-green {
         border-left-color: $green !important;
+        &:before{
+            color: $green;
+        }
     }
     .cate-title {
         h2 {
@@ -829,6 +853,7 @@ body {
     .article {
         padding: 20px 10px;
         color: #333;
+        line-height: 30px;
         p {
             line-height: 30px;
         }
@@ -840,6 +865,7 @@ body {
             display: block;
             color: $blue;
         }
+
     }
     .order-table {
         text-align: center;
@@ -859,8 +885,29 @@ body {
             color: #333;
         }
     }
+        .descript-pct{
+            text-align: center;
+        img{
+        width: 75%;
+        vertical-align: bottom;
+        }
+        }
 }
-
+.class-sche{
+    width: 100%;
+    caption{
+        text-align: center;
+        color:$blue;
+        line-height: 60px;
+    }
+    tr{
+        line-height: 60px;
+        text-align: center;
+        &:nth-child(even){
+            background-color: #eee;
+        }
+    }
+}
 .selector {
     padding: 20px 0;
     border-bottom: 1px solid $blue;
@@ -903,26 +950,26 @@ body {
         vertical-align: middle;
         margin-right: 10px;
     }
-    &.icon-10 {
-        &:before {
-            color: $red;
-        }
-    }
-    &.icon-12 {
-        &:before {
-            color: $orange;
-        }
-    }
-    &.icon-13 {
-        &:before {
-            color: $green;
-        }
-    }
-    &.icon-14 {
-        &:before {
-            color: $pink;
-        }
-    }
+    // &.icon-10 {
+    //     &:before {
+    //         color: $red;
+    //     }
+    // }
+    // &.icon-12 {
+    //     &:before {
+    //         color: $orange;
+    //     }
+    // }
+    // &.icon-13 {
+    //     &:before {
+    //         color: $green;
+    //     }
+    // }
+    // &.icon-14 {
+    //     &:before {
+    //         color: $pink;
+    //     }
+    // }
 }
 
 .sub-nav {
@@ -1415,7 +1462,275 @@ body {
         }
     }
 }
+.course-list{
+    overflow: hidden;
+    .item{
+        border: 1px solid #eee;
+        width: 280px;
+        height: 190px;
+        float: left;
+        position: relative;
+        overflow: hidden;
+        box-sizing: content-box;
+        margin-right: 15px;
+        margin-bottom: 20px;
+        transition: all .3s ease;
+        .item-pct{
+            width: 100%;
+            height: 100%;
+        }
+        .caption{
+            position: absolute;
+            bottom:-35px;
+            .mk-subject{
+                float: left;
+                color: #fff;
+                width: 80px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                background-color: $red;
+            }
+            .time{
+                float: left;
+                color: #fff;
+                width: 200px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                background-color: #000;
+                opacity: 0.5;
+            }
+            .detail{
+                background-color: #fff;
+            }
+            .title{
+                line-height: 30px;
+                padding-left: 5px;
+            }
+            .price{
+                padding-left: 5px;
+                color:$red;
+                line-height: 30px;
 
+            }
+            .primary-btn{
+                width: 100%;
+                line-height: 35px;
+            }
+        }
+    }
+            .item:hover .caption{
+            transition: all .3s ease;
+            bottom: 0;
+        }
+}
+.recommend-courses{
+    float: left;
+    .item{
+        width: 370px;
+        margin-right: 25px;
+        margin-bottom: 10px;
+        padding: 10px;
+        overflow: hidden;
+        float: left;
+        .item-pct{
+            float: left;
+            width: 142px;
+            height: 100px;
+            margin-right: 10px;
+        }
+        .icon-60{
+            margin-left: 10px;
+            color:#666;
+        }
+        .caption{
+        }
+        .price{
+            float: left;
+            color: $red;
+            width: 90px;
+            font-size:16px;
+        }
+        .stud-num{
+            color:#666;
+            &:before{
+                color:#666;
+            }
+        }
+        .title{
+            line-height: 1.5em;
+            height: 50px;
+        }
+
+    }
+}
+.course-header{
+    overflow: hidden;
+    .left{
+        float: left;
+        img{
+            width:450px;
+            height:300px;
+        }
+    }
+    .right{
+        float: left;
+        margin-left: 30px;
+        color:#666;
+        p{
+            margin-bottom: 20px;
+            &:before{
+                margin-right: 10px;
+                font-size: 16px;
+            }
+        }
+        .title{
+            font-size:24px;
+            width: 20em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .price{
+            background-color: #fff;
+            line-height: 55px;
+            width: 380px;
+            .now-price{
+                color:$red;
+                font-size:22px;
+                margin: 0 20px;
+            }
+            .original-price{
+                font-size: 16px;
+                text-decoration: line-through;
+            }
+        }
+        .stud-num,
+        .play-num{
+            color:$red;
+        }
+        .primary-btn{
+            display: inline-block;
+            width: 100px;
+            line-height: 35px;
+            font-size: 18px;
+        }
+    }
+}
+.rate-items {
+    .item {
+        padding: 15px;
+        overflow: hidden;
+        .item-pct {
+            margin-right: 20px;
+            width: 100px;
+            height: 100px;
+            float: left;
+            img {
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .item-detail {
+            float: left;
+            width: 610px;
+        }
+        .user-rated {
+            overflow: hidden;
+            .user-name {
+                margin-right: 10px;
+                float: left;
+                line-height: 22px;
+            }
+            .rated {
+                float: left;
+            }
+        }
+        .date {
+            float: right;
+            color: #666;
+            line-height: 22px;
+        }
+    }
+    .course-name {
+        color: #666;
+    }
+}
+
+.star-rated {
+    background-image: url(../images/starky.png);
+    background-repeat: repeat-x;
+    width: 110px;
+    height: 22px;
+    position: relative;
+}
+
+.star-rated span {
+    background-image: url(../images/starsy.png);
+    background-repeat: repeat-x;
+    height: 22px;
+    width: 22px;
+    vertical-align: middle;
+    position: absolute;
+}
+.info-head{
+    overflow: hidden;
+    background-color: #EDF5FA;
+    padding: 30px 10px;
+    .portrait{
+        float: left;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        margin-right: 30px;
+        img{
+            width: 100%;
+        }
+    }
+    .base-info{
+        float: left;
+        width: 500px;
+
+    }
+    .login-info{
+    padding: 0 8px;
+    line-height: 2em;
+    border-bottom: 1px dashed #707070;
+    width: 320px;
+    }
+    .info-list{
+     padding: 0 8px;
+       
+    }
+    .message-list{
+        float: left;
+        li{
+            float: left;
+            height: 92px;
+            width: 92px;
+            margin-right: 10px;
+            background-color: $blue;
+            border-radius: 5px;
+            .mes-title{
+                display: block;
+                text-align: center;
+            }
+            .mes-num{
+                font-size: 24px;
+                display: block;
+                padding-top: 20px;
+                padding-bottom: 15px;
+                text-align: center;
+            }
+            a{
+                height: 92px;
+                width: 92px;
+                color:#fff;
+            }
+        }
+    }
+}
 .aui_buttons {
     text-align: center;
     button {
@@ -1433,7 +1748,6 @@ body {
 }
 
 .clearfix:after {
-    /*最简方式*/
     content: '';
     display: block;
     clear: both;
