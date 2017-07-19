@@ -1,5 +1,4 @@
 require.config({
-    baseUrl: 'js',
     paths: {
         'jquery': 'lib/jquery',
         'validate': 'lib/jquery.validate.min',
