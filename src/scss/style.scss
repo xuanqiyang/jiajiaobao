@@ -1956,14 +1956,14 @@ body {
     width: 100px;
 }
 /* ------------ */
-#wrapper {
-    // width: 980px;
+.wrapper {
+    width: 980px !important;
     margin: 0 auto;
     margin: 1em;
     width: auto;
 }
 
-#container {
+.upload {
     border: 1px solid #dadada;
     color: #838383;
     font-size: 12px;
@@ -1971,7 +1971,7 @@ body {
     background-color: #FFF;
 }
 
-#uploader .queueList {
+.uploader .queueList {
     margin: 20px;
 }
 
@@ -1981,7 +1981,7 @@ body {
     clip: rect(1px,1px,1px,1px);
 }
 
-#uploader .placeholder {
+.uploader .placeholder {
     border: 3px dashed #e6e6e6;
     min-height: 238px;
     padding-top: 158px;
@@ -1992,7 +1992,7 @@ body {
     position: relative;
 }
 
-#uploader .placeholder .webuploader-pick {
+.uploader .placeholder .webuploader-pick {
     font-size: 18px;
     background: #00b7ee;
     border-radius: 3px;
@@ -2005,11 +2005,11 @@ body {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-#uploader .placeholder .webuploader-pick-hover {
+.uploader .placeholder .webuploader-pick-hover {
     background: #00a2d4;
 }
 
-#uploader .placeholder .flashTip {
+.uploader .placeholder .flashTip {
     color: #666666;
     font-size: 12px;
     position: absolute;
@@ -2017,29 +2017,29 @@ body {
     text-align: center;
     bottom: 20px;
 }
-#uploader .placeholder .flashTip a {
+.uploader .placeholder .flashTip a {
     color: #0785d1;
     text-decoration: none;
 }
-#uploader .placeholder .flashTip a:hover {
+.uploader .placeholder .flashTip a:hover {
     text-decoration: underline;
 }
 
-#uploader .placeholder.webuploader-dnd-over {
+.uploader .placeholder.webuploader-dnd-over {
     border-color: #999999;
 }
 
-#uploader .placeholder.webuploader-dnd-over.webuploader-dnd-denied {
+.uploader .placeholder.webuploader-dnd-over.webuploader-dnd-denied {
     border-color: red;
 }
 
-#uploader .filelist {
+.uploader .filelist {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-#uploader .filelist:after {
+.uploader .filelist:after {
     content: '';
     display: block;
     width: 0;
@@ -2048,7 +2048,7 @@ body {
     clear: both;
 }
 
-#uploader .filelist li {
+.uploader .filelist li {
     width: 110px;
     height: 110px;
     background: url(../images/bg.png) no-repeat;
@@ -2061,12 +2061,12 @@ body {
     font-size: 12px;
 }
 
-#uploader .filelist li p.log {
+.uploader .filelist li p.log {
     position: relative;
     top: -45px;
 }
 
-#uploader .filelist li p.title {
+.uploader .filelist li p.title {
     position: absolute;
     top: 0;
     left: 0;
@@ -2079,7 +2079,7 @@ body {
     text-align: left;
 }
 
-#uploader .filelist li p.progress {
+.uploader .filelist li p.progress {
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -2088,7 +2088,7 @@ body {
     overflow: hidden;
     z-index: 50;
 }
-#uploader .filelist li p.progress span {
+.uploader .filelist li p.progress span {
     display: none;
     overflow: hidden;
     width: 0;
@@ -2135,7 +2135,7 @@ body {
     }
 }
 
-#uploader .filelist li p.imgWrap {
+.uploader .filelist li p.imgWrap {
     position: relative;
     z-index: 2;
     line-height: 110px;
@@ -2157,11 +2157,11 @@ body {
     transition: 200ms ease-out;
 }
 
-#uploader .filelist li img {
+.uploader .filelist li img {
     width: 100%;
 }
 
-#uploader .filelist li p.error {
+.uploader .filelist li p.error {
     background: #f43838;
     color: #fff;
     position: absolute;
@@ -2173,7 +2173,7 @@ body {
     z-index: 100;
 }
 
-#uploader .filelist li .success {
+.uploader .filelist li .success {
     display: block;
     position: absolute;
     left: 0;
@@ -2184,7 +2184,7 @@ body {
     background: url(../images/success.png) no-repeat right bottom;
 }
 
-#uploader .filelist div.file-panel {
+.uploader .filelist div.file-panel {
     position: absolute;
     height: 0;
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80000000', endColorstr='#80000000')\0;
@@ -2196,7 +2196,7 @@ body {
     z-index: 300;
 }
 
-#uploader .filelist div.file-panel span {
+.uploader .filelist div.file-panel span {
     width: 24px;
     height: 24px;
     display: inline;
@@ -2208,28 +2208,28 @@ body {
     cursor: pointer;
 }
 
-#uploader .filelist div.file-panel span.rotateLeft {
+.uploader .filelist div.file-panel span.rotateLeft {
     background-position: 0 -24px;
 }
-#uploader .filelist div.file-panel span.rotateLeft:hover {
+.uploader .filelist div.file-panel span.rotateLeft:hover {
     background-position: 0 0;
 }
 
-#uploader .filelist div.file-panel span.rotateRight {
+.uploader .filelist div.file-panel span.rotateRight {
     background-position: -24px -24px;
 }
-#uploader .filelist div.file-panel span.rotateRight:hover {
+.uploader .filelist div.file-panel span.rotateRight:hover {
     background-position: -24px 0;
 }
 
-#uploader .filelist div.file-panel span.cancel {
+.uploader .filelist div.file-panel span.cancel {
     background-position: -48px -24px;
 }
-#uploader .filelist div.file-panel span.cancel:hover {
+.uploader .filelist div.file-panel span.cancel:hover {
     background-position: -48px 0;
 }
 
-#uploader .statusBar {
+.uploader .statusBar {
     height: 63px;
     border-top: 1px solid #dadada;
     padding: 0 20px;
@@ -2238,7 +2238,7 @@ body {
     position: relative;
 }
 
-#uploader .statusBar .progress {
+.uploader .statusBar .progress {
     border: 1px solid #1483d8;
     width: 198px;
     background: #fff;
@@ -2251,7 +2251,7 @@ body {
     position: relative;
     margin-right: 10px;
 }
-#uploader .statusBar .progress span.percentage {
+.uploader .statusBar .progress span.percentage {
     width: 0;
     height: 100%;
     left: 0;
@@ -2259,33 +2259,33 @@ body {
     background: #1483d8;
     position: absolute;
 }
-#uploader .statusBar .progress span.text {
+.uploader .statusBar .progress span.text {
     position: relative;
     z-index: 10;
 }
 
-#uploader .statusBar .info {
+.uploader .statusBar .info {
     display: inline-block;
     font-size: 14px;
     color: #666666;
 }
 
-#uploader .statusBar .btns {
+.uploader .statusBar .btns {
     position: absolute;
     top: 10px;
     right: 20px;
     line-height: 40px;
 }
 
-#filePicker2 {
+.filePicker2 {
     display: inline-block;
     float: left;
 }
 
-#uploader .statusBar .btns .webuploader-pick,
-#uploader .statusBar .btns .uploadBtn,
-#uploader .statusBar .btns .uploadBtn.state-uploading,
-#uploader .statusBar .btns .uploadBtn.state-paused {
+.uploader .statusBar .btns .webuploader-pick,
+.uploader .statusBar .btns .uploadBtn,
+.uploader .statusBar .btns .uploadBtn.state-uploading,
+.uploader .statusBar .btns .uploadBtn.state-paused {
     background: #ffffff;
     border: 1px solid #cfcfcf;
     color: #565656;
@@ -2297,23 +2297,23 @@ body {
     font-size: 14px;
     float: left;
 }
-#uploader .statusBar .btns .webuploader-pick-hover,
-#uploader .statusBar .btns .uploadBtn:hover,
-#uploader .statusBar .btns .uploadBtn.state-uploading:hover,
-#uploader .statusBar .btns .uploadBtn.state-paused:hover {
+.uploader .statusBar .btns .webuploader-pick-hover,
+.uploader .statusBar .btns .uploadBtn:hover,
+.uploader .statusBar .btns .uploadBtn.state-uploading:hover,
+.uploader .statusBar .btns .uploadBtn.state-paused:hover {
     background: #f0f0f0;
 }
 
-#uploader .statusBar .btns .uploadBtn {
+.uploader .statusBar .btns .uploadBtn {
     background: #00b7ee;
     color: #fff;
     border-color: transparent;
 }
-#uploader .statusBar .btns .uploadBtn:hover {
+.uploader .statusBar .btns .uploadBtn:hover {
     background: #00a2d4;
 }
 
-#uploader .statusBar .btns .uploadBtn.disabled {
+.uploader .statusBar .btns .uploadBtn.disabled {
     pointer-events: none;
     opacity: 0.6;
 }
@@ -2331,7 +2331,33 @@ body {
 .clearfix {
     zoom: 1;
 }
+.webuploader-container {
+    position: relative;
+}
+.webuploader-element-invisible {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px,1px,1px,1px);
+}
+.webuploader-pick {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background: #00b7ee;
+    padding: 10px 15px;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.webuploader-pick-hover {
+    background: #00a2d4;
+}
 
+.webuploader-pick-disable {
+    opacity: 0.6;
+    pointer-events:none;
+}
 .primary-btn {
     cursor: pointer;
     height: 35px;
