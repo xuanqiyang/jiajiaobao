@@ -5,7 +5,8 @@ require.config({
         'messages': 'lib/messages_zh.min',
         'superSlide': 'lib/jquery.SuperSlide',
         'lazyload': 'lib/jquery.lazyload.min',
-        'art': 'jquery.artDialog'
+        'art': 'lib/jquery.artDialog',
+        'webuploader': 'lib/webuploader'
     },
     shim: {
         'validate': {
@@ -27,13 +28,17 @@ require.config({
         'art': {
             deps: ['jquery'],
             exports: 'art'
+        },
+        'webuploader': {
+            deps: ['jquery'],
+            exports: 'webuploader'
         }
     }
 });
 
-define("starScore", ['jquery'], function($){
+define("starScore", ['jquery'], function($) {
     return {
-        scoreFun:function(object, opts){
+        scoreFun: function(object, opts) {
             var defaults = {
                 fen_d: 22,
                 ScoreGrade: 5,
@@ -69,7 +74,7 @@ define("starScore", ['jquery'], function($){
             var atu;
             var fen_d = options.fen_d;
             var len = options.ScoreGrade;
-            if(startParent.length>0){
+            if (startParent.length > 0) {
                 startParent.width(fen_d * len);
                 var preA = (5 / len);
                 for (var i = 0; i < len; i++) {
@@ -112,7 +117,8 @@ define("starScore", ['jquery'], function($){
                                 }
                             }
                         });
-                });
+                    });
+
                 function show(num, obj) {
                     var n = parseInt(num) + 1;
                     var lefta = num * fen_d;
@@ -129,83 +135,9 @@ define("starScore", ['jquery'], function($){
         }
     };
 });
-
-require(['jquery', 'art','starScore'], function($, art, starScore) {
-        starScore.scoreFun($(".stars"));
-    $(".rated span").each(function(index, element) {
-        var num = $(this).attr("tip");
-        var www = num * 2 * 11;
-        $(this).css("width", www);
-    });
-    var showServeTerms = document.getElementById("showServeTerms");
-    var serveTermsDialog = document.getElementById("serveTermsDialog");
-    var getCode = document.getElementById("getCode");
-    var cellphone = document.getElementById("cellphone");
-    var time = 60;
-    var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
-    var $formTab = $(".form-tab label");
-    var $formBody = $(".form-body");
-
-    $formTab.bind('click', function(event) {
-        $(this).index() ? $formBody[0].action = "http://www.baidu.com/" : $formBody[0].action = "http://www.google.com/";
-        $(this).addClass('active').siblings('label').removeClass('active');
-    });
-    var $option = $(".selector .option");
-    $option.each(function(){
-    	var $selectorItem = $(this).find('dl dd a');
-    	$selectorItem.click(function(){
-    		$(this).addClass('active').siblings().removeClass('active');
-    	});
-    });
-
-    if (getCode) {
-        getCode.onclick = function(e) {
-            if (cellphone.value.length == 11 && mobile.test(cellphone.value)) {
-                timer(this);
-            } else {
-                art.dialog({
-                    title: "登录提示",
-                    content: "请填写手机号码!",
-                    lock: true,
-                    fixed: true
-                }).show();
-            }
-        };
-    }
-
-    if (showServeTerms) {
-        showServeTerms.onclick = function() {
-            art.dialog({
-                title: "家教宝服务协议",
-                lock: true,
-                fixed: true,
-                content: document.getElementById("serveTermsDialog"),
-                okVal: '同意',
-                ok: function() {
-                    document.getElementById("agreeServeTerms").checked = 'checked';
-                },
-                cancelVal: '关闭',
-                cancel: true
-            }).show();
-        };
-    }
-
-    function timer(o) {
-        if (time == 0) {
-            o.removeAttribute('disabled');
-            o.innerText = "获取验证码";
-            time = 60;
-        } else {
-            o.setAttribute("disabled", true);
-            o.innerText = time;
-            time--;
-            setTimeout(function() {
-                timer(o);
-            }, 1000)
-        }
-    };
+// 当domReady的时候开始初始化
+require(['jquery', 'webuploader'], function($, WebUploader) {
 });
-
 require(['jquery', 'lazyload', 'superSlide'], function($) {
     jQuery('.focus').hover(function() { jQuery(this).find('.prev,.next').stop(true, true).fadeTo('show', 0.2) }, function() { jQuery(this).find('.prev,.next').fadeOut() });
     jQuery('.focus').slide({ mainCell: '.pic', effect: 'fold', autoPlay: true, delayTime: 600, trigger: 'click' });
