@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/dialog.css">
     <link rel="stylesheet" type="text/css" href="../js/skins/default.css">
-    <link rel="stylesheet" type="text/css" href="../js/webuploader/webuploader.css">
+    <link rel="stylesheet" type="text/css" href="../css/webuploader.css">
     <title>家教宝首页</title>
 </head>
 
@@ -142,15 +142,49 @@
                 </div>
                 <form>
                     <div class="identi-title">
-                        <span class="icon-73">个人身份认证<i>(未认证)</i></span>
+                        <span class="icon-73">学历认证<i>(未认证)</i></span>
                         <span class="tip">家教宝平台老师必须为通过身份认证的真实身份老师</span>
                         <button class="primary-btn btn-radius blue-btn" type="submit">认证</button>
                     </div>
-
-                    <div class="wrapper">
-                                        请提交能证明你学历水平的证件照片，如：学生证、在读证明、毕业证等（需包含照片、姓名、专业、 校方印章等有效信息）
-
-                        <div id="uploader" class="uploader uploaderPic">
+                    <div id="eduIdenti" class="uploader uploaderPic">
+                        <div class="queueList">
+                            请提交能证明你学历水平的证件照片，如：学生证、在读证明、毕业证等（需包含照片、姓名、专业、 校方印章等有效信息）
+                            <div class="placeholder">
+                                <div class="filePicker"></div>
+                                <p>最多上传五张</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form>
+                    <div class="identi-title">
+                        <span class="icon-73">教师证认证<i>(未认证)</i></span>
+                        <span class="tip">可提升学生对专业教师身份的信任度</span>
+                        <button class="primary-btn btn-radius blue-btn" type="submit">认证</button>
+                    </div>
+                    <div id="teachIdenti" class="uploader uploaderPic">
+                        <div class="queueList">
+                            请提交在有效期内的教师证照片，需保证头像及文字清晰可见。
+                            <div class="placeholder">
+                                <div class="filePicker"></div>
+                                <p>最多上传五张</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form>
+                    <div class="identi-title">
+                        <span class="icon-73">专业资质认证<i>(未认证)</i></span>
+                        <span class="tip">可提升学生对专业技能的认可度</span>
+                        <button class="primary-btn btn-radius blue-btn" type="submit">认证</button>
+                    </div>
+                    <div id="profIdenti" class="uploader uploaderPic">
+                        <div class="queueList">
+                            请提交你教学能力或专业能力的证明，如职称证书、考级证书等。
+                            <div class="placeholder">
+                                <div class="filePicker"></div>
+                                <p>最多上传五张</p>
+                            </div>
                         </div>
                     </div>
                 </form>
@@ -215,24 +249,52 @@
     </div>
     <!-- <script type="text/javascript" src="../js/require.js" data-main="../js/main"></script> -->
     <script type="text/javascript" src="../js/lib/jquery.js"></script>
-<script type="text/javascript" src="../js/webuploader/webuploader.js"></script>
-<script type="text/javascript" src="../js/upload.js"></script>
-<script type="text/javascript">
-    $("#uploader").powerWebUpload({
-    // 选完文件后，是否自动上传。
-    auto: true,
-    accept: {
-        title: 'Images',
-        extensions: 'gif,jpg,jpeg,bmp,png',
-        mimeTypes: 'image/*'
-    },
-                formData: {
-                uid: 123
-            },
-    fileNumLimit:5,
-    fileNumLimit:5 * 1024 * 1024
+    <script type="text/javascript" src="../js/webuploader.js"></script>
+    <script type="text/javascript" src="../js/upload.js"></script>
+    <script type="text/javascript">
+    $("#eduIdenti").powerWebUpload({
+        // 选完文件后，是否自动上传。
+        auto: false,
+        accept: {
+            title: 'Images',
+            extensions: 'gif,jpg,jpeg,bmp,png',
+            mimeTypes: 'image/*'
+        },
+        formData: {
+            uid: 123
+        },
+        fileNumLimit: 5,
+        fileNumLimit: 5 * 1024 * 1024
     });
-</script>
+    $("#teachIdenti").powerWebUpload({
+        // 选完文件后，是否自动上传。
+        auto: false,
+        accept: {
+            title: 'Images',
+            extensions: 'gif,jpg,jpeg,bmp,png',
+            mimeTypes: 'image/*'
+        },
+        formData: {
+            uid: '4545'
+        },
+        fileNumLimit: 5,
+        fileNumLimit: 5 * 1024 * 1024
+    });
+    $("#profIdenti").powerWebUpload({
+        // 选完文件后，是否自动上传。
+        auto: false,
+        accept: {
+            title: 'Images',
+            extensions: 'gif,jpg,jpeg,bmp,png',
+            mimeTypes: 'image/*'
+        },
+        formData: {
+            uid: '4545'
+        },
+        fileNumLimit: 5,
+        fileNumLimit: 5 * 1024 * 1024
+    });
+    </script>
 </body>
 
 </html>

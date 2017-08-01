@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/webuploader.css">
+    <title>家教宝首页</title>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+<div class="browser-upgrade">
+    <div class="wrapper">您的浏览器版本过低，为了保证更好的安全性和浏览体验，建议更换高级浏览器，如：
+        <a href="http://www.baidu.com/s?wd=谷歌浏览器">谷歌浏览器</a><a href="http://www.baidu.com/s?wd=火狐浏览器">火狐浏览器</a>
+        <a href="http://www.baidu.com/s?wd=360极速浏览器">360 极速浏览器</a>
+    </div>
+</div>
+<style>
+    body {
+        padding-top: 40px;
+    }
+
+    .browser-upgrade {
+        background-color: #DA7575;
+        border-bottom: 1px solid #D65F39;
+        color: #F0F0F0;
+        padding: 10px 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10000;
+    }
+
+    .browser-upgrade .wrapper {
+        width: 1100px;
+        margin: 0 auto;
+    }
+
+    .browser-upgrade a {
+        color: yellow;
+        margin-right: 10px;
+        text-decoration: underline;
+    }
+</style>
+<![endif]-->
+    <div class="header">
+        <div class="tools-bar">
+            <div class="container">
+                <ul class="tools-left">
+                    <li><a class="icon-1">请登录</a></li>
+                    <li><a>免费注册</a></li>
+                    <li><a class="icon-2">手机家教宝</a></li>
+                    <li><a class="icon-3">关注领好课</a></li>
+                </ul>
+                <ul class="tools-right">
+                    <li><a href="">家教宝首页</a></li>
+                    <li><a href="">我的家教宝</a><i class="icon-81"></i></li>
+                    <li><a class="icon-4" href="">我的课表</a></li>
+                    <li><span>客服热线:020-34332718</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="login-header">
+            <div class="container">
+                <a href="../index.html">
+                    <img src="../images/logo2.png">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="content container">
+        <div class="info-head">
+            <div class="portrait">
+                <img src="../images/portrait_student.png">
+                <a href="#">修改图像</a>
+            </div>
+            <div class="base-info">
+                <div class="login-info">欢迎你,<span class="username">134****4579</span>
+                    <a class="exit" href="#">退出</a>
+                </div>
+                <ul class="info-list">
+                    <li><span>教员编号：</span><i>88888</i></li>
+                    <li><span>联 系 人：</span><i>黄小姐</i></li>
+                    <li><span>授课科目：</span><i>一年级语文</i><i>一年级语文</i></li>
+                    <li><span>所在位置：</span><i>广州市海珠区昌岗中路211号信和广场2栋1601</i></li>
+                </ul>
+            </div>
+            <ul class="message-list">
+                <li><a href=""><span class="mes-num">0.00</span><span class="mes-title">我的余额</span></a></li>
+                <li><a href=""><span class="mes-num">0</span><span class="mes-title">我的优惠券</span></a></li>
+                <li><a href=""><span class="mes-num">0</span><span class="mes-title">我的订单</span></a></li>
+                <li><a href=""><span class="mes-num">0</span><span class="mes-title">我的评价</span></a></li>
+                <li><a href=""><span class="mes-num">0</span><span class="mes-title">我的视频课</span></a></li>
+            </ul>
+        </div>
+        <div class="info-side">
+            <ul class="side-nav">
+                <li><a href="" class="icon-44">我的资料</a></li>
+                <li><a href="" class="icon-4">我的课表</a></li>
+                <li><a href="" class="icon-7">我的学生</a></li>
+                <li><a href="" class="icon-45">我的订单</a></li>
+                <li><a href="" class="icon-61">我的视频课</a></li>
+                <li class="current"><a href="" class="icon-79">我的评价</a></li>
+                <li><a href="teacher_identi.html" class="icon-72">认证中心</a></li>
+            </ul>
+            <div class="follow-wechat">
+                <img src="../images/wechat.png">
+                <p>家教宝
+                    <br>微信公众号</p>
+            </div>
+        </div>
+        <div class="info-content">
+            <h2 class="info-title">上传您的课程</h2>
+            <div class="info">
+                <form>
+                    <div class="kv-line">
+                        <label class="label"><i>*</i>科目：</label>
+                        <input type="text" name="" placeholder="">
+                    </div>
+                    <div class="kv-line">
+                        <label class="label"><i>*</i>年纪：</label>
+                        <input type="text" name="" placeholder="">
+                    </div>
+                    <div class="kv-line">
+                        <label class="label"><i>*</i>课程名称：</label>
+                        <input type="text" name="" placeholder="">
+                    </div>
+                    <div id="course_pct" class="uploader uploaderPic">
+                        <div class="queueList">
+                            <div class="placeholder">
+                                <p>上传课程描述图片,不超过10张</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="course_video" class="uploader uploaderPic">
+                        <div class="queueList">
+                            <div class="placeholder">
+                                <p>上传课程视频</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kv-line">
+                        <label class="label"><i>*</i>插班原则：</label>
+                        <input type="text" name="" placeholder="">
+                    </div>
+                    <div class="kv-line">
+                        <label class="label"><i>*</i>退班原则：</label>
+                        <input type="text" name="" placeholder="">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="footer">
+        <div class="footer-info container">
+            <dl>
+                <dt>帮助中心</dt>
+                <dd><a>平台流程</a></dd>
+                <dd><a>老师入驻</a></dd>
+                <dd><a>老师帮助</a></dd>
+                <dd><a>学生帮助</a></dd>
+                <dd><a>机构帮助</a></dd>
+            </dl>
+            <dl>
+                <dt>服务支持</dt>
+                <dd>平台保障</dd>
+                <dd>支付问题</dd>
+                <dd>意见回馈</dd>
+                <dd>侵权投诉</dd>
+            </dl>
+            <dl>
+                <dt>关于家教宝</dt>
+                <dd>了解我们</dd>
+                <dd>代理合作</dd>
+                <dd>校园招聘</dd>
+                <dd>社会招聘</dd>
+                <dd>网站条款</dd>
+            </dl>
+            <dl>
+                <dt>关注我们</dt>
+                <dd>官方微信</dd>
+                <dd>联系我们</dd>
+            </dl>
+            <dl>
+                <span class="icon-22"></span>
+                <dt>020-34332718</dt>
+                <dd>周一至周六9:30-18:00</dd>
+            </dl>
+        </div>
+        <div class="footer-copyright container">
+            <p>
+                <a>网站条款</a> <a>活动公告</a> <a>新闻报道</a> <a>申请合作</a>
+                <a>网站地图</a> <a>油画培训</a> <a>绘画培训</a> <a>拉丁舞培训</a> <a>雅思机经</a> <a>Java培训</a>
+            </p>
+            <p>合作伙伴：<a>新加坡新三板</a> <a>新加坡好姆集团</a> <a>广州英语宝</a> <a>醉猫商城</a></p>
+            </p>
+            <p>© Copyright 2017 By Home English - All rights Reserved!粤ICP备15111299号-3 广州市好姆教育科技有限公司
+            </p>
+            <p></p>
+            <div class="identi">
+                <a><img class="lazy" src="../images/loading.gif" data-original="../images/identi_1.png"></a>
+                <a><img class="lazy" src="../images/loading.gif" data-original="../images/identi_2.png"></a>
+                <a><img class="lazy" src="../images/loading.gif" data-original="../images/identi_3.png"></a>
+                <a><img class="lazy" src="../images/loading.gif" data-original="../images/identi_4.png"></a>
+                <a><img class="lazy" src="../images/loading.gif" data-original="../images/identi_5.png"></a>
+            </div>
+        </div>
+    </div>
+    <!--     <div id="industry">
+        <div class="sPopupDiv" style="width: 705px; left: 212px; top: 168px; visibility: visible;">
+            <div class="student_tips" style="left: 440px;"></div>
+            <div class="sPopupTitle290">
+                <h1>选择行业</h1>
+                <div class="sButtonBlock"><a class="orgButton" href="#" onclick="dyweTrackEvent('ok','choosecondition001');return zlzp.PopupDiv.allIns['buttonSelIndustry'].fnClickOk();">确定</a> <a class="blueButton" href="#" onclick="dyweTrackEvent('buxian','choosecondition001');return zlzp.PopupDiv.allIns['buttonSelIndustry'].fnClickAll()">不限</a> <a class="closeButton" href="#" onclick="return zlzp.PopupDiv.allIns['buttonSelIndustry'].fnClickClose()"></a></div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="sPopupBlock">
+                <div class="paddingTB">
+                    <table class="chebox" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tbody>
+                            <tr class="zebraCol0">
+                                <td class="leftClass industryLCla" nowrap="nowrap" valign="middle">IT|通信|电子|互联网</td>
+                                <td class="jobtypeItems">
+                                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">互联网/电子商务</label>
+                                                </td>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">计算机软件</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">IT服务(系统/数据/维护)</label>
+                                                </td>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">电子技术/半导体/集成电路</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">计算机硬件</label>
+                                                </td>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">通信/电信/网络设备</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">通信/电信运营、增值服务</label>
+                                                </td>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">网络游戏</label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="zebraCol1">
+                                <td class="leftClass industryLCla" nowrap="nowrap" valign="middle">金融业</td>
+                                <td class="jobtypeItems">
+                                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">基金/证券/期货/投资</label>
+                                                </td>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">保险</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">银行</label>
+                                                </td>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">信托/担保/拍卖/典当</label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="zebraCol0">
+                                <td class="leftClass industryLCla" nowrap="nowrap" valign="middle">房地产|建筑业</td>
+                                <td class="jobtypeItems">
+                                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">房地产/建筑/建材/工程</label>
+                                                </td>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">家居/室内设计/装饰装潢</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">物业管理/商业中心</label>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="zebraCol1">
+                                <td class="leftClass industryLCla" nowrap="nowrap" valign="middle">商业服务</td>
+                                <td class="jobtypeItems">
+                                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">专业服务/咨询(财会/法律/人力资源等)</label>
+                                                </td>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">广告/会展/公关</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">中介服务</label>
+                                                </td>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">检验/检测/认证</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">外包服务</label>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="zebraCol0">
+                                <td class="leftClass industryLCla" nowrap="nowrap" valign="middle">贸易|批发|零售|租赁业</td>
+                                <td class="jobtypeItems">
+                                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">快速消费品（食品/饮料/烟酒/日化）</label>
+                                                </td>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">耐用消费品（服饰/纺织/皮革/家具/家电）</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">贸易/进出口</label>
+                                                </td>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">零售/批发</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">租赁服务</label>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="zebraCol1">
+                                <td class="leftClass industryLCla" nowrap="nowrap" valign="middle">文体教育|工艺美术</td>
+                                <td class="jobtypeItems">
+                                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">教育/培训/院校</label>
+                                                </td>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">礼品/玩具/工艺美术/收藏品/奢侈品</label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="zebraCol0">
+                                <td class="leftClass industryLCla" nowrap="nowrap" valign="middle">生产|加工|制造</td>
+                                <td class="jobtypeItems">
+                                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">汽车/摩托车</label>
+                                                </td>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">大型设备/机电设备/重工业</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">加工制造（原料加工/模具）</label>
+                                                </td>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">仪器仪表及工业自动化</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">印刷/包装/造纸</label>
+                                                </td>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">办公用品及设备</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">医药/生物工程</label>
+                                                </td>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">医疗设备/器械</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">航空/航天研究与制造</label>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="zebraCol1">
+                                <td class="leftClass industryLCla" nowrap="nowrap" valign="middle">交通|运输|物流|仓储</td>
+                                <td class="jobtypeItems">
+                                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">交通/运输</label>
+                                                </td>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">物流/仓储</label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="zebraCol0">
+                                <td class="leftClass industryLCla" nowrap="nowrap" valign="middle">服务业</td>
+                                <td class="jobtypeItems">
+                                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">医疗/护理/美容/保健/卫生服务</label>
+                                                </td>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">酒店/餐饮</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">旅游/度假</label>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="zebraCol1">
+                                <td class="leftClass industryLCla" nowrap="nowrap" valign="middle">文化|传媒|娱乐|体育</td>
+                                <td class="jobtypeItems">
+                                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">媒体/出版/影视/文化传播</label>
+                                                </td>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">娱乐/体育/休闲</label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="zebraCol0">
+                                <td class="leftClass industryLCla" nowrap="nowrap" valign="middle">能源|矿产|环保</td>
+                                <td class="jobtypeItems">
+                                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">能源/矿产/采掘/冶炼</label>
+                                                </td>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">石油/石化/化工</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">电气/电力/水利</label>
+                                                </td>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">环保</label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="zebraCol1">
+                                <td class="leftClass industryLCla" nowrap="nowrap" valign="middle">政府|非盈利机构</td>
+                                <td class="jobtypeItems">
+                                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">政府/公共事业/非盈利机构</label>
+                                                </td>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">学术/科研</label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="zebraCol0">
+                                <td class="leftClass industryLCla" nowrap="nowrap" valign="middle">农|林|牧|渔|其他</td>
+                                <td class="jobtypeItems">
+                                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">农/林/牧/渔</label>
+                                                </td>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">跨领域经营</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="50%" class="mOutItem">
+                                                    <label class="noselItem">
+                                                        <input type="checkbox" name="c_buttonSelIndustry">其他</label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <script type="text/javascript" src="../js/lib/jquery.js"></script>
+    <script type="text/javascript" src="../js/webuploader.js"></script>
+    <script type="text/javascript" src="../js/upload.js"></script>
+    <script type="text/javascript">
+    $("#course_pct").powerWebUpload({
+        auto: false,
+        accept: {
+            title: 'Images',
+            extensions: 'gif,jpg,jpeg,bmp,png',
+            mimeTypes: 'image/*'
+        },
+        formData: {
+            uid: 'course_pct'
+        },
+        fileNumLimit: 10,
+        fileSizeLimit: 10 * 1024 * 1024
+    });
+        $("#course_video").powerWebUpload({
+        auto: false,
+        accept: {
+            title: 'Videos',
+            extensions: 'mp4,avi,flv',
+            mimeTypes: 'video/*'
+        },
+        formData: {
+            uid: 'course_video'
+        },
+        fileNumLimit: 1,
+        fileSizeLimit: 800 * 1024 * 1024
+    });
+    </script>
+</body>
+
+</html>
