@@ -136,7 +136,7 @@
                             <i>*</i>身份证号码：</label>
                         <input type="text">
                     </div>
-                    <div id="idIdenti" class="uploader uploaderPic">
+                    <div id="teachIdIdenti" class="uploader uploaderPic">
                         <div class="queueList">
                             <div class="placeholder">
                                 <p>上传2张图片(身份证正反面)</p>
@@ -251,67 +251,7 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="../js/lib/jquery.js"></script>
-    <script type="text/javascript" src="../js/webuploader.js"></script>
-    <script type="text/javascript" src="../js/upload.js"></script>
-    <script type="text/javascript">
-    $("#idIdenti").powerWebUpload({
-        // 选完文件后，是否自动上传。
-        auto: false,
-        accept: {
-            title: 'Images',
-            extensions: 'gif,jpg,jpeg,bmp,png',
-            mimeTypes: 'image/*'
-        },
-        formData: {
-            uid: 'idIdenti'
-        },
-        fileNumLimit: 5,
-        fileSizeLimit: 5 * 1024 * 1024
-    });
-    $("#eduIdenti").powerWebUpload({
-        // 选完文件后，是否自动上传。
-        auto: false,
-        accept: {
-            title: 'Images',
-            extensions: 'gif,jpg,jpeg,bmp,png',
-            mimeTypes: 'image/*'
-        },
-        formData: {
-            uid: 'eduIdenti'
-        },
-        fileNumLimit: 5,
-        fileSizeLimit: 5 * 1024 * 1024
-    });
-    $("#teachIdenti").powerWebUpload({
-        // 选完文件后，是否自动上传。
-        auto: false,
-        accept: {
-            title: 'Images',
-            extensions: 'gif,jpg,jpeg,bmp,png',
-            mimeTypes: 'image/*'
-        },
-        formData: {
-            uid: 'teachIdenti'
-        },
-        fileNumLimit: 5,
-        fileSizeLimit: 5 * 1024 * 1024
-    });
-    $("#profIdenti").powerWebUpload({
-        // 选完文件后，是否自动上传。
-        auto: false,
-        accept: {
-            title: 'Images',
-            extensions: 'gif,jpg,jpeg,bmp,png',
-            mimeTypes: 'image/*'
-        },
-        formData: {
-            uid: 'profIdenti'
-        },
-        fileNumLimit: 5,
-        fileSizeLimit: 5 * 1024 * 1024
-    });
-    </script>
+     <script type="text/javascript" src="../js/require.js" data-main="../js/main"></script>
 </body>
 
 </html>

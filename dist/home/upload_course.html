@@ -99,12 +99,13 @@
         </div>
         <div class="info-side">
             <ul class="side-nav">
-                <li><a href="" class="icon-44">我的资料</a></li>
+                <li><a href="user_info_teacher.html" class="icon-44">我的资料</a></li>
                 <li><a href="" class="icon-4">我的课表</a></li>
-                <li><a href="" class="icon-7">我的学生</a></li>
-                <li><a href="" class="icon-45">我的订单</a></li>
-                <li><a href="" class="icon-61">我的视频课</a></li>
-                <li class="current"><a href="" class="icon-79">我的评价</a></li>
+                <li><a href="my_students.html" class="icon-7">我的学生</a></li>
+                <li><a href="my_orders.html" class="icon-45">我的订单</a></li>
+                <li><a href="my_courses.html" class="icon-61">我的视频课</a></li>
+                <li><a href="upload_course.html" class="icon-33">上传课程</a></li>
+                <li class="current"><a href="my_evaluates.html" class="icon-79">我的评价</a></li>
                 <li><a href="teacher_identi.html" class="icon-72">认证中心</a></li>
             </ul>
             <div class="follow-wechat">
@@ -118,11 +119,11 @@
             <div class="info">
                 <form>
                     <div class="kv-line">
-                        <label class="label"><i>*</i>科目：</label>
+                        <label class="label"><i>*</i>教授科目：</label>
                         <input type="text" name="" placeholder="">
                     </div>
                     <div class="kv-line">
-                        <label class="label"><i>*</i>年纪：</label>
+                        <label class="label"><i>*</i>教授年纪：</label>
                         <input type="text" name="" placeholder="">
                     </div>
                     <div class="kv-line">
@@ -618,37 +619,7 @@
             </div>
         </div>
     </div> -->
-    <script type="text/javascript" src="../js/lib/jquery.js"></script>
-    <script type="text/javascript" src="../js/webuploader.js"></script>
-    <script type="text/javascript" src="../js/upload.js"></script>
-    <script type="text/javascript">
-    $("#course_pct").powerWebUpload({
-        auto: false,
-        accept: {
-            title: 'Images',
-            extensions: 'gif,jpg,jpeg,bmp,png',
-            mimeTypes: 'image/*'
-        },
-        formData: {
-            uid: 'course_pct'
-        },
-        fileNumLimit: 10,
-        fileSizeLimit: 10 * 1024 * 1024
-    });
-        $("#course_video").powerWebUpload({
-        auto: false,
-        accept: {
-            title: 'Videos',
-            extensions: 'mp4,avi,flv',
-            mimeTypes: 'video/*'
-        },
-        formData: {
-            uid: 'course_video'
-        },
-        fileNumLimit: 1,
-        fileSizeLimit: 800 * 1024 * 1024
-    });
-    </script>
+    <script type="text/javascript" src="../js/require.js" data-main="../js/main"></script>
 </body>
 
 </html>
