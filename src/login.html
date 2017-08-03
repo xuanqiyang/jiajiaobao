@@ -69,18 +69,18 @@
                 <label class="active">学生登录</label>
                 <label>老师登录</label>
             </div>
-            <form class="form-body form-pannel" action="" method="post">
+            <form id="login_form" class="form-body form-pannel" action="" method="post">
                 <div class="fg">
-                    <input type="text" name="" placeholder="手机号码">
+                    <input type="text" name="email" placeholder="电子邮箱">
                 </div>
                 <div class="fg">
-                    <input type="password" name="" placeholder="请输入密码">
+                    <input type="password" name="password" placeholder="请输入密码">
                 </div>
                 <label class="check">
                     <input type="checkbox" name="" checked="checked">记住我
                 </label>
                 <label class="fg">
-                    <button class="primary-btn blue-btn submit-btn large-btn">登录</button>
+                    <button type="submit" class="primary-btn blue-btn submit-btn large-btn">登录</button>
                 </label>
                 <div class="clearfix">
                     <a class="pull-left" href="fogive.html">忘记密码</a><a class="pull-right" href="regist.html">免费注册</a>
@@ -98,6 +98,7 @@
             <p>广州市好姆教育科技有限公司</p>
         </div>
     </div>
+    <div id="errorMesg" style="display: none;"></div>
 </body>
 <script type="text/javascript" src="js/require.js" data-main="js/main"></script>
 

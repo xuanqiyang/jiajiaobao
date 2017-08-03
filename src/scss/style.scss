@@ -158,6 +158,9 @@ body {
         line-height: 1.5;
         .city-trigger {
             font-size: 12px;
+            &:hover a{
+                color:$blue;
+            }
         }
         a {
             color: #333;
@@ -928,16 +931,16 @@ body {
         float: left;
     }
     .option dt {
-        margin: 10px 22px 10px 0;
-        display: inline-block;
+        margin: 8px 22px 8px 0;
+        display: block;
         max-width: 80px;
     }
     .option dd {
-        max-width: 1010px;
+        width: 1010px;
     }
     .option dd a {
         white-space: nowrap;
-        margin: 10px 22px 10px 0;
+        margin: 8px 22px 8px 0;
         display: inline-block;
         &:hover {
             color: $blue;
@@ -1054,7 +1057,7 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 100vw;
-    height: 73vh;
+    height: 80vh;
 }
 
 .item-list {
@@ -1062,6 +1065,9 @@ body {
     margin: 25px 0;
     overflow: hidden;
     .item {
+        &>a{
+            color:#333;
+        }
         width: 220px;
         height: 300px;
         border: 1px solid #eee;
@@ -1207,7 +1213,7 @@ body {
         float: left;
         width: 273px;
         border: 1px solid #eee;
-        margin-right: 0px;
+        margin-right: 10px;
         &:nth-child(4n) {
             margin-right: 0;
         }
@@ -1825,8 +1831,8 @@ body {
             display: inline-block;
             margin-right: 50px;
             padding: 8px 12px;
-            .nums{
-                color:$red
+            .nums {
+                color: $red
             }
         }
         .active {
@@ -1972,10 +1978,110 @@ body {
     }
 }
 
+.hot-area {
+    a {
+        color: $blue !important;
+    }
+}
+
+.area-list {
+    margin: 20px 0;
+    width: 1000px;
+    ul {
+        li{
+            margin: 15px 0;
+        }
+    }
+    dl {
+        overflow: hidden;
+    }
+    dt {
+        float: left;
+        margin-right: 10px;
+        line-height: 25px;
+    }
+    dd {
+        line-height: 25px;
+        float: left;
+        width: 780px;
+        a {
+            line-height: 25px;
+            white-space: nowrap;
+            color: #666;
+            margin-right: 10px;
+            &:hover{
+                color: $blue;
+            }
+        }
+    }
+    .area-title {
+        position: relative;
+        border-top: 1px solid #eee;
+        width: 1000px;
+        margin: 20px 0;
+        h2 {
+            position: absolute;
+            left: 0;
+            top: -10px;
+        }
+    }
+}
+.anchor-list {
+    li dl dt{
+        background-color: $blue;
+        color: #fff;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+    }
+}
+.anchor-alphabet {
+    margin: 20px 0;
+    font-size: 16px;
+    overflow: hidden;
+    color:#666;
+    dt {
+        float: left;
+        line-height: 25px;
+    }
+    dd {
+        font-size: 16px;
+        float: left;
+        cursor: pointer;
+        border-radius: 2px;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        margin-left: 10px;
+        color:#fff;
+        background-color: $blue;
+        text-align: center;
+        &:hover{
+            background-color: $red;
+        }
+    }
+}
+
 .go {
     float: right;
     display: block;
     width: 100px;
+}
+
+.clear {
+    clear: both;
+    display: block;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
 }
 
 .primary-btn {

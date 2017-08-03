@@ -1,4 +1,4 @@
-$(function() {
+require(['jquery', 'validator'], function($, validator) {
     $.validator.addMethod("filetype", function(value, element, param) {
         var fileType = value.substring(value.lastIndexOf(".") + 1).toLowerCase();
         return this.optional(element) || $.inArray(fileType, param) != -1;
@@ -27,9 +27,9 @@ $(function() {
         },
         onsubmit: true,
         rules: {
-            cellphone: {
+            email: {
                 required: true,
-                isPhone: true
+                email: true
             },
             password: {
                 required: true,
@@ -39,9 +39,9 @@ $(function() {
             }
         },
         messages: {
-            cellphone: {
-                required: "请输入手机号码",
-                isPhone: "输入正确的手机号码"
+            email: {
+                required: "请输入邮箱地址",
+                email: "输入正确的邮箱地址"
             },
             password: {
                 required: "请输入密码",
@@ -57,9 +57,9 @@ $(function() {
         },
         onsubmit: true,
         rules: {
-            cellphone: {
+            email: {
                 required: true,
-                isPhone: true
+                email: true
             },
             verifiCode: {
                 required: true,
@@ -67,7 +67,7 @@ $(function() {
                 minlength: 6,
                 maxlength: 6
             },
-            regpsw: {
+            password: {
                 required: true,
                 maxlength: 20,
                 minlength: 6,
@@ -77,14 +77,17 @@ $(function() {
                 required: true,
                 maxlength: 20,
                 minlength: 6,
-                equalTo: "#regpsw",
+                equalTo: "#password",
                 checkPsw: true
+            },
+            agree:{
+                required:true
             }
         },
         messages: {
-            cellphone: {
-                required: "请输入手机号码",
-                isPhone: "请输入正确的手机号码"
+            email: {
+                required: "请输入邮箱地址",
+                isPhone: "请输入正确的邮箱"
             },
             verifiCode: {
                 required: "请输入验证码",
@@ -92,7 +95,7 @@ $(function() {
                 minlength: "请输入正确的验证码",
                 maxlength: "请输入正确的验证码"
             },
-            regpsw: {
+            password: {
                 required: "请输入密码",
                 maxlength: "密码不能超过20位",
                 minlength: "密码不能少于6位",
@@ -300,27 +303,7 @@ $(function() {
         }
 
     });
-    $("#ask").validate({
-        errorPlacement: function(error, element) {
-            $("#errorMesg").html(error);
-        },
-        rules: {
-            ask_fname: {
-                filetype: ['jpg', 'png']
-            },
-            ask_descript: {
-                required: true
-            }
-        },
-        messages: {
-            ask_fname: {
-                filetype: "图片只能是png,jpg"
-            },
-            ask_descript: {
-                required: "请填写对问题的详细描述"
-            }
-        }
-    });
+
     $("#course_info").validate({
         errorPlacement: function(error, element) {
             $("#errorMesg").html(error);
@@ -342,111 +325,6 @@ $(function() {
             }
         }
     });
-    $("#example").validate({
-        errorPlacement: function(error, element) {
-            $("#errorMesg").html(error);
-        },
-        rules: {
-            example: {
-                required: true
-            }
-        },
-        messages: {
-            example: {
-                required: "未填写信息"
-            }
-        }
-    });
-    $("#join_rule").validate({
-        errorPlacement: function(error, element) {
-            $("#errorMesg").html(error);
-        },
-        rules: {
-            join_rule: {
-                required: true
-            }
-        },
-        messages: {
-            join_rule: {
-                required: "未填写信息"
-            }
-        }
-    });
-    $("#exit_rule").validate({
-        errorPlacement: function(error, element) {
-            $("#errorMesg").html(error);
-        },
-        rules: {
-            exit_rule: {
-                required: true
-            }
-        },
-        messages: {
-            exit_rule: {
-                required: "未填写信息"
-            }
-        }
-    });
-    $("#feedback").validate({
-        errorPlacement: function(error, element) {
-            $("#errorMesg").html(error);
-        },
-        rules: {
-            feedback: {
-                required: true
-            }
-        },
-        messages: {
-            feedback: {
-                required: "未填写信息"
-            }
-        }
-    });
-    $("#certificate").validate({
-        errorPlacement: function(error, element) {
-            $("#errorMesg").html(error);
-        },
-        rules: {
-            certificate: {
-                required: true
-            }
-        },
-        messages: {
-            certificate: {
-                required: "未填写信息"
-            }
-        }
-    });
-    $("#identi_education").validate({
-        errorPlacement: function(error, element) {
-            $("#errorMesg").html(error);
-        },
-        rules: {
-            identi_education: {
-                required: true
-            }
-        },
-        messages: {
-            identi_education: {
-                required: "未填写信息"
-            }
-        }
-    });
-    $("#introduce").validate({
-        errorPlacement: function(error, element) {
-            $("#errorMesg").html(error);
-        },
-        rules: {
-            introduce: {
-                required: true
-            }
-        },
-        messages: {
-            introduce: {
-                required: "未填写信息"
-            }
-        }
-    });
     $("#identi_ID").validate({
         errorPlacement: function(error, element) {
             $("#errorMesg").html(error);
@@ -462,21 +340,7 @@ $(function() {
             }
         }
     });
-    $("#other").validate({
-        errorPlacement: function(error, element) {
-            $("#errorMesg").html(error);
-        },
-        rules: {
-            other: {
-                required: true
-            }
-        },
-        messages: {
-            other: {
-                required: "未填写信息"
-            }
-        }
-    });
+
     $("#itenti_professor").validate({
         errorPlacement: function(error, element) {
             $("#errorMesg").html(error);
@@ -491,33 +355,5 @@ $(function() {
                 required: "未填写信息"
             }
         }
-    });
-    $("#general").validate({
-        errorPlacement: function(error, element) {
-            $("#errorMesg").html(error);
-        },
-        rules: {
-            general: {
-                required: true
-            }
-        },
-        messages: {
-            general: {
-                required: "未填写信息"
-            }
-        }
-    });
-
-    function errorModal(valid_form) {
-        var valid = valid_form.valid();
-        if (!valid) {
-            mui.alert("<div id='errorMesg'></div>")
-        }
-    }
-    $(".btn-submit").click(function() {
-        errorModal($("form"));
-    })
-    $("#save").click(function() {
-        $('.btn-submit').trigger('click')
     });
 });

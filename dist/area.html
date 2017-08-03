@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>家教宝首页</title>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+<div class="browser-upgrade">
+    <div class="wrapper">您的浏览器版本过低，为了保证更好的安全性和浏览体验，建议更换高级浏览器，如：
+        <a href="http://www.baidu.com/s?wd=谷歌浏览器">谷歌浏览器</a><a href="http://www.baidu.com/s?wd=火狐浏览器">火狐浏览器</a>
+        <a href="http://www.baidu.com/s?wd=360极速浏览器">360 极速浏览器</a>
+    </div>
+</div>
+<style>
+    body {
+        padding-top: 40px;
+    }
+
+    .browser-upgrade {
+        background-color: #DA7575;
+        border-bottom: 1px solid #D65F39;
+        color: #F0F0F0;
+        padding: 10px 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10000;
+    }
+
+    .browser-upgrade .wrapper {
+        width: 1100px;
+        margin: 0 auto;
+    }
+
+    .browser-upgrade a {
+        color: yellow;
+        margin-right: 10px;
+        text-decoration: underline;
+    }
+</style>
+<![endif]-->
+    <div class="header">
+        <div class="tools-bar">
+            <div class="container">
+                <ul class="tools-left">
+                    <li><a class="icon-1">请登录</a></li>
+                    <li><a>免费注册</a></li>
+                    <li><a class="icon-2">手机家教宝</a></li>
+                    <li><a class="icon-3">关注领好课</a></li>
+                </ul>
+                <ul class="tools-right">
+                    <li><a href="">家教宝首页</a></li>
+                    <li><a href="">我的家教宝</a><i class="icon-81"></i></li>
+                    <li><a class="icon-4" href="">我的课表</a></li>
+                    <li><span>客服热线:020-34332718</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="search-wrapper container">
+            <div class="search-form" data-cur="teacher" data-placeholder="搜索你想学的科目、老师试试" data-courseplaceholder="搜索你想学的课程试试" data-orgplaceholder="搜索你要找的科目、机构试试" style="top:8px;">
+                <div class="search-tab">
+                    <div class="tab-item active">老师</div>
+                    <div class="tab-item">课程</div>
+                    <div class="tab-item">机构</div>
+                </div>
+                <i class="icon-6"></i>
+                <div class="placeholder-wrappers">
+                    <div class="placeholder">搜索你想学的科目、老师试试</div>
+                    <input class="search-input form-text" type="text" name="q" autocomplete="off">
+                </div>
+                <input type="hidden" name="city" value="">
+                <button class="btn">搜索</button>
+                <p class="search-hotwords">
+                    <a href="">语文</a><a href="">数学</a><a href="">英语</a><a href="">家庭教育</a><a href="">托福</a><a href="">雅思</a>
+                </p>
+            </div>
+            <ul class="enter-box">
+                <li>
+                    <a href="enter_teacher.html">
+                        <i class="icon icon-7"></i>
+                        <span>老师入驻</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="enter_org.html">
+                        <i class="icon icon-8"></i>
+                        <span>机构入驻</span>
+                    </a>
+                </li>
+            </ul>
+            <a href="index.html" class="logo"></a>
+            <div class="city">
+                <strong>广州</strong>
+                <div class="city-trigger">
+                    <a href="/changecity/init">切换城市</a>
+                </div>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="container">
+                <div class="all-couser pull-left">
+                    <div class="menu-title">
+                        <h1>全部课程<span class="icon-36 folder"></span></h1>
+                    </div>
+                    <div class="menu-wrapper">
+                        <ul class="menu">
+                            <li>
+                                <dl>
+                                    <dt>高中</dt>
+                                    <dd><a href="/l-c1-a1-n135/">高三语文</a></dd>
+                                    <dd><a href="/l-c1-a1-n124/">高三数学</a></dd>
+                                    <dd><a href="/l-c1-a1-n115/">高三英语</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>初中</dt>
+                                    <dd><a href="/l-c1-a1-n130/">初三语文</a></dd>
+                                    <dd><a href="/l-c1-a1-n119/">初三数学</a></dd>
+                                    <dd><a href="/l-c1-a1-n112/">初三英语</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>小学</dt>
+                                    <dd><a href="/l-c1-a1-n109/">小学语文</a></dd>
+                                    <dd><a href="/l-c1-a1-n100/">小学数学</a></dd>
+                                    <dd><a href="/l-c1-a1-n102/">小学英语</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>语言</dt>
+                                    <dd><a href="/l-c1-a1-n100/">雅思</a></dd>
+                                    <dd><a href="/l-c1-a1-n217/">托福</a></dd>
+                                    <dd><a href="/l-c1-a1-n132/">英语口语</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>艺术</dt>
+                                    <dd><a href="/l-c1-a1-n131/">钢琴</a></dd>
+                                    <dd><a href="/l-c1-a1-n213/">吉他</a></dd>
+                                    <dd><a href="/l-c1-a1-n108/">小提琴</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>其它</dt>
+                                    <dd><a href="/l-c1-a1-n141/">乒乓球</a></dd>
+                                    <dd><a href="/l-c1-a1-n138/">羽毛球</a></dd>
+                                    <dd><a href="/l-c1-a1-n138/">跆拳道</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <div class="sub-menu">
+                            <div class="sub-menu-content">
+                                <dl>
+                                    <dt>高中</dt>
+                                    <dd>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="sub-menu-content">
+                                <dl>
+                                    <dt>初中</dt>
+                                    <dd>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="sub-menu-content">
+                                <dl>
+                                    <dt>初中</dt>
+                                    <dd>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="sub-menu-content">
+                                <dl>
+                                    <dt>初中</dt>
+                                    <dd>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="sub-menu-content">
+                                <dl>
+                                    <dt>初中</dt>
+                                    <dd>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="sub-menu-content">
+                                <dl>
+                                    <dt>初中</dt>
+                                    <dd>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                        <a href="">数学</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav-bar pull-left">
+                    <li class="current"><a href="index.html">首页</a></li>
+                    <li class=""><a>挑老师</a></li>
+                    <li class=""><a>快速请家教</a></li>
+                    <li class=""><a>资费说明</a></li>
+                    <li class=""><a>最新学员</a></li>
+                    <li class=""><a>家长学堂</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container content">
+        <div class="area-list">
+            <ul>
+                <li>
+                    <dl>
+                        <dt>热门国家</dt>
+                        <dd class="hot-area">
+                            <a href="">中国</a>
+                            <a href="">中国</a>
+                            <a href="">中国</a>
+                            <a href="">中国</a>
+                            <a href="">中国</a>
+                            <a href="">中国</a>
+                            <a href="">中国</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>热门城市</dt>
+                        <dd class="hot-area">
+                            <a href="">包头</a>
+                            <a href="">包头</a>
+                            <a href="">包头</a>
+                            <a href="">包头</a>
+                            <a href="">包头</a>
+                            <a href="">包头</a>
+                            <a href="">包头</a>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <div class="area-list">
+            <div class="area-title">
+                <h2>国家</h2>
+            </div>
+            <dl>
+                <dd>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                    <a href="">中国</a>
+                </dd>
+            </dl>
+        </div>
+        <dl class="anchor-alphabet">
+            <dt>按首字母选择城市
+            </dt>
+            <dd anchor="#A">A</dd>
+            <dd anchor="#B">B</dd>
+            <dd anchor="#C">C</dd>
+            <dd anchor="#D">D</dd>
+            <dd anchor="#E">E</dd>
+            <dd anchor="#F">F</dd>
+            <dd anchor="#G">G</dd>
+            <dd anchor="#H">H</dd>
+            <dd anchor="#I">I</dd>
+            <dd anchor="#J">J</dd>
+            <dd anchor="#K">K</dd>
+            <dd anchor="#L">L</dd>
+            <dd anchor="#M">M</dd>
+            <dd anchor="#N">N</dd>
+            <dd anchor="#O">O</dd>
+            <dd anchor="#P">P</dd>
+            <dd anchor="#Q">Q</dd>
+            <dd anchor="#R">R</dd>
+            <dd anchor="#S">S</dd>
+            <dd anchor="#T">T</dd>
+            <dd anchor="#U">U</dd>
+            <dd anchor="#V">V</dd>
+            <dd anchor="#W">W</dd>
+            <dd anchor="#Z">Z</dd>
+        </dl>
+        <div class="area-list">
+            <div class="area-title">
+                <h2>城市</h2>
+            </div>
+            <ul class="anchor-list">
+                <li>
+                    <dl id="A">
+                        <dt>
+                            A
+                        </dt>
+                        <dd>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a> <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a> <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a> <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a> <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl id="B">
+                        <dt>
+                            B
+                        </dt>
+                        <dd>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl id="C">
+                        <dt>
+                            C
+                        </dt>
+                        <dd>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl id="D">
+                        <dt>
+                            D
+                        </dt>
+                        <dd>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl id="E">
+                        <dt>
+                            E
+                        </dt>
+                        <dd>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                            <a href="">安阳</a>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-info container">
+            <dl>
+                <dt>帮助中心</dt>
+                <dd><a>平台流程</a></dd>
+                <dd><a>老师入驻</a></dd>
+                <dd><a>老师帮助</a></dd>
+                <dd><a>学生帮助</a></dd>
+                <dd><a>机构帮助</a></dd>
+            </dl>
+            <dl>
+                <dt>服务支持</dt>
+                <dd>平台保障</dd>
+                <dd>支付问题</dd>
+                <dd>意见回馈</dd>
+                <dd>侵权投诉</dd>
+            </dl>
+            <dl>
+                <dt>关于家教宝</dt>
+                <dd>了解我们</dd>
+                <dd>代理合作</dd>
+                <dd>校园招聘</dd>
+                <dd>社会招聘</dd>
+                <dd>网站条款</dd>
+            </dl>
+            <dl>
+                <dt>关注我们</dt>
+                <dd>官方微信</dd>
+                <dd>联系我们</dd>
+            </dl>
+            <dl>
+                <span class="icon-22"></span>
+                <dt>020-34332718</dt>
+                <dd>周一至周六9:30-18:00</dd>
+            </dl>
+        </div>
+        <div class="footer-copyright container">
+            <p>
+                <a>网站条款</a> <a>活动公告</a> <a>新闻报道</a> <a>申请合作</a>
+                <a>网站地图</a> <a>油画培训</a> <a>绘画培训</a> <a>拉丁舞培训</a> <a>雅思机经</a> <a>Java培训</a>
+            </p>
+            <p>合作伙伴：<a>新加坡新三板</a> <a>新加坡好姆集团</a> <a>广州英语宝</a> <a>醉猫商城</a></p>
+            </p>
+            <p>© Copyright 2017 By Home English - All rights Reserved!粤ICP备15111299号-3 广州市好姆教育科技有限公司
+            </p>
+            <p></p>
+            <div class="identi">
+                <a><img class="item-pct lazy" src="images/loading.gif" data-original="images/identi_1.png"></a>
+                <a><img class="item-pct lazy" src="images/loading.gif" data-original="images/identi_2.png"></a>
+                <a><img class="item-pct lazy" src="images/loading.gif" data-original="images/identi_3.png"></a>
+                <a><img class="item-pct lazy" src="images/loading.gif" data-original="images/identi_4.png"></a>
+                <a><img class="item-pct lazy" src="images/loading.gif" data-original="images/identi_5.png"></a>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/require.js" data-main="js/main.js"></script>
+
+</html>

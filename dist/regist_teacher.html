@@ -65,32 +65,28 @@
     </div>
     <div class="content bg-login">
         <div class="container">
-            <form class="login-form form-pannel pull-left">
+            <form class="login-form form-pannel pull-left" id="reg_form">
                 <h4>老师注册</h4>
                 <label class="fg">
-                    <span>手机号码：</span>
-                    <input type="text" name="" placeholder="请输入手机号码" id="cellphone">
+                    <span>电子邮箱：</span>
+                    <input id="email" type="text" name="email" placeholder="请输入邮箱地址">
                 </label>
                 <label class="fg">
                     <span>验证码：</span>
-                    <input type="text" name="" placeholder="请输入验证码">
+                    <input type="text" name="verifiCode" placeholder="请输入验证码">
                     <button class="primary-btn blue-btn" type="button" id="getCode">获取验证码</button>
                 </label>
                 <label class="fg">
-                    <span>邮箱：</span>
-                    <input type="text" name="" placeholder="请输入邮箱地址">
-                </label>
-                <label class="fg">
                     <span>设置密码：</span>
-                    <input type="password" name="" placeholder="请设置密码">
+                    <input type="password" name="password" placeholder="请设置密码">
                 </label>
                 <label class="fg">
                     <span>确认密码：</span>
-                    <input type="password" name="" placeholder="请再次输入密码">
+                    <input type="password" name="againpsw" placeholder="请再次输入密码">
                 </label>
                 <label class="fg">
                     <span></span>
-                    <input type="checkbox" checked="checked" id="agreeServeTerms">我已阅读并同意<a id="showServeTerms" href="javascript:void(0);">《家教宝服务协议》</a>
+                    <input type="checkbox" checked="checked" name="agree" id="agreeServeTerms">我已阅读并同意<a id="showServeTerms" href="javascript:void(0);">《家教宝服务协议》</a>
                 </label>
                 <label class="fg"><span></span>
                     <button class="primary-btn blue-btn submit-btn" type="submit" name="" value="">
@@ -112,6 +108,7 @@
             <p>广州市好姆教育科技有限公司</p>
         </div>
     </div>
+    <div id="errorMesg"></div>
     <div id="serveTermsDialog" style="display: none;">
         <h2>新三板在线服务协议</h2>
         <div class="info">
