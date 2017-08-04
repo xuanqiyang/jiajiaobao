@@ -112,8 +112,8 @@ require(['upload'], function() {
             auto: false,
             accept: {
                 title: 'Images',
-                extensions: 'gif,jpg,jpeg,bmp,png',
-                mimeTypes: 'image/*'
+                extensions: 'gif,jpg,jpeg,png',
+                mimeTypes: 'image/jpg,image/jpeg,image/png'
             },
             formData: {
                 uid: 'course_pct'
@@ -126,7 +126,7 @@ require(['upload'], function() {
             accept: {
                 title: 'Videos',
                 extensions: 'mp4,avi,flv',
-                mimeTypes: 'video/*'
+                mimeTypes: 'video/mp4,video/avi,video/flv'
             },
             formData: {
                 uid: 'course_video'
@@ -139,8 +139,8 @@ require(['upload'], function() {
             auto: false,
             accept: {
                 title: 'Images',
-                extensions: 'gif,jpg,jpeg,bmp,png',
-                mimeTypes: 'image/*'
+                extensions: 'gif,jpg,jpeg,png',
+                mimeTypes: 'image/jpg,image/jpeg,image/png'
             },
             formData: {
                 uid: 'idIdenti'
@@ -153,8 +153,8 @@ require(['upload'], function() {
             auto: false,
             accept: {
                 title: 'Images',
-                extensions: 'gif,jpg,jpeg,bmp,png',
-                mimeTypes: 'image/*'
+                extensions: 'gif,jpg,jpeg,png',
+                mimeTypes: 'image/jpg,image/jpeg,image/png'
             },
             formData: {
                 uid: 'idIdenti'
@@ -167,8 +167,8 @@ require(['upload'], function() {
             auto: false,
             accept: {
                 title: 'Images',
-                extensions: 'gif,jpg,jpeg,bmp,png',
-                mimeTypes: 'image/*'
+                extensions: 'gif,jpg,jpeg,png',
+                mimeTypes: 'image/jpg,image/jpeg,image/png'
             },
             formData: {
                 uid: 'idIdenti'
@@ -181,8 +181,8 @@ require(['upload'], function() {
             auto: false,
             accept: {
                 title: 'Images',
-                extensions: 'gif,jpg,jpeg,bmp,png',
-                mimeTypes: 'image/*'
+                extensions: 'gif,jpg,jpeg,png',
+                mimeTypes: 'image/jpg,image/jpeg,image/png'
             },
             formData: {
                 uid: 'eduIdenti'
@@ -195,8 +195,8 @@ require(['upload'], function() {
             auto: false,
             accept: {
                 title: 'Images',
-                extensions: 'gif,jpg,jpeg,bmp,png',
-                mimeTypes: 'image/*'
+                extensions: 'gif,jpg,jpeg,png',
+                mimeTypes: 'image/jpg,image/jpeg,image/png'
             },
             formData: {
                 uid: 'teachIdenti'
@@ -209,8 +209,8 @@ require(['upload'], function() {
             auto: false,
             accept: {
                 title: 'Images',
-                extensions: 'gif,jpg,jpeg,bmp,png',
-                mimeTypes: 'image/*'
+                extensions: 'gif,jpg,jpeg,png',
+                mimeTypes: 'image/jpg,image/jpeg,image/png'
             },
             formData: {
                 uid: 'profIdenti'
@@ -221,7 +221,7 @@ require(['upload'], function() {
     })
 
 });
-require(['jquery', 'validate'], function($) {
+require(['jquery','validator','validate'], function($) {
     var getCode = document.getElementById("getCode");
     var email = document.getElementById("email");
     var time = 60;
@@ -229,7 +229,13 @@ require(['jquery', 'validate'], function($) {
     if (getCode) {
         getCode.onclick = function(e) {
             if (emailRegex.test(email.value)) {
-                timer(this);
+                art.dialog({
+                    time:1.25,
+                    title: "提示",
+                    content: "前往注册邮箱获取验证码",
+                    lock: true,
+                    fixed: true
+                }).show();
             } else {
                 art.dialog({
                     time:1.25,

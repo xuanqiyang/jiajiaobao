@@ -119,6 +119,10 @@ require(['jquery', 'validator'], function($, validator) {
             $("#errorMesg").html(error);
         },
         rules: {
+            email:{
+                required:true,
+                email:true
+            },
             verifiCode: {
                 required: true,
                 number: true,
@@ -140,6 +144,10 @@ require(['jquery', 'validator'], function($, validator) {
             }
         },
         messages: {
+            email:{
+                required:'请输入邮箱地址',
+                email:'请输入正确的的邮箱'
+            },
             verifiCode: {
                 required: "请输入验证码",
                 number: "请输入正确的验证码",
@@ -161,6 +169,7 @@ require(['jquery', 'validator'], function($, validator) {
             }
         }
     });
+    
     $("#teacherinfo").validate({
         errorPlacement: function(error, element) {
             $("#errorMesg").html(error);
