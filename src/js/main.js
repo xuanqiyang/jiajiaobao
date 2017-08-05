@@ -146,7 +146,7 @@ require(['upload'], function() {
                 uid: 'idIdenti'
             },
             fileNumLimit: 2,
-            fileSizeLimit: 5 * 1024 * 1024
+            fileSizeLimit: 2 * 1024 * 1024
         });
         $("#licenseIdenti").powerWebUpload({
             // 选完文件后，是否自动上传。
@@ -160,7 +160,7 @@ require(['upload'], function() {
                 uid: 'idIdenti'
             },
             fileNumLimit: 2,
-            fileSizeLimit: 5 * 1024 * 1024
+            fileSizeLimit: 2 * 1024 * 1024
         });
         $("#teachIdIdenti").powerWebUpload({
             // 选完文件后，是否自动上传。
@@ -174,7 +174,7 @@ require(['upload'], function() {
                 uid: 'idIdenti'
             },
             fileNumLimit: 2,
-            fileSizeLimit: 5 * 1024 * 1024
+            fileSizeLimit: 2 * 1024 * 1024
         });
         $("#eduIdenti").powerWebUpload({
             // 选完文件后，是否自动上传。
@@ -264,9 +264,10 @@ require(['jquery','validator','validate'], function($) {
         }
     }
     $(".submit-btn").click(function() {
-        errorModal($("form"));
+        that = $(this);
+        $form = $(this).parent("form");
+        errorModal($('form'));
     })
-
     function timer(o) {
         if (time == 0) {
             o.removeAttribute('disabled');

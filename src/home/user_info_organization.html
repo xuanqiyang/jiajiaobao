@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/dialog.css">
+    <link rel="stylesheet" type="text/css" href="../js/skins/default.css">
     <title>家教宝首页</title>
 </head>
 
@@ -114,16 +116,16 @@
             </div>
         </div>
         <div class="info-content">
-            <h2 class="info-title">我的老师</h2>
+            <h2 class="info-title">个人资料</h2>
             <div class="info">
-                <form>
+                <form id="organinfo" method="post">
                     <div class="kv-line">
                         <label class="label">会员身份：</label>
                         <input type="text" class="static-input" value="机构" readonly="readonly">
                     </div>
                     <div class="kv-line">
                         <label class="label"><i>*</i>公司名称：</label>
-                        <input type="text" name="">
+                        <input type="text" name="username">
                     </div>
                     <div class="kv-line">
                         <label class="label"><i>*</i>企业类型：</label>
@@ -135,24 +137,17 @@
                     </div>
                     <div class="kv-line">
                         <label class="label"><i>*</i>所属行业：</label>
-                        <input type="text" name="" class="industry-dialog">
+                        <input type="text" name="industry" class="industry-dialog">
                     </div>
                     <div class="kv-line">
-                        <label class="label"><i>*</i>联系人：</label>
-                        <input type="text" name="">
-                        <label class="radio">
-                            <input type="radio" name="sex" checked="checked">男</label>
-                        <label class="radio">
-                            <input type="radio" name="sex">女</label>
+                        <label class="label"><i>*</i>公司地址：</label>
+                        <input type="text" name="address" class="">
                     </div>
                     <div class="kv-line">
-                        <label class="label">联系人电话：</label>
-                        <input type="text" class="static-input" name="" value="156758884545" readonly="readonly">
+                        <label class="label" name="phonenum"><i>*</i>联系电话：</label>
+                        <input type="text">
                     </div>
-                    <div class="kv-line">
-                        <label class="label">联系电话：</label>
-                        <input type="text" name="" value="12145664564" readonly="readonly">
-                    </div>
+                    <div class=""></div>
                     <div class="kv-line">
                         <label class="label"><i>*</i>授课科目：</label>
                         <input type="text" name="" placeholder="">
@@ -166,14 +161,10 @@
                         </select>
                     </div>
                     <div class="kv-line">
-                        <label class="label"><i>*</i>授课地址：</label>
-                        <input type="text" name="">
-                    </div>
-                    <div class="kv-line">
                         <label class="label">公司简介：</label>
                         <textarea></textarea>
                     </div>
-                    <button class="primary-btn blue-btn">保存</button>
+                    <button class="primary-btn blue-btn btn-radius submit-btn">保存</button>
                 </form>
             </div>
         </div>
@@ -641,6 +632,7 @@
             </div>
         </div>
     </div> -->
+    <div id="errorMesg"></div>
     <script type="text/javascript" src="../js/require.js" data-main="../js/main"></script>
 </body>
 

@@ -121,20 +121,20 @@
                 <div class="info-nav">
                     <span class="active toggle-tag" href="">身份认证</span>
                 </div>
-                <form>
+                <form id="organId" method="post">
                     <div class="identi-title">
                         <span class="icon-73 verified">个人身份认证<i>(已认证)</i></span>
                         <span class="tip">家教宝平台老师必须为通过身份认证的真实身份老师</span>
-                        <button class="primary-btn btn-radius blue-btn" type="submit">认证</button>
+                        <button  type="submit" class="primary-btn btn-radius blue-btn submit-btn">认证</button>
                     </div>
                     <div class="kv-line">
                         <label class="label"><i>*</i>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</label>
-                        <input type="text">
+                        <input type="text" name="realName">
                     </div>
                     <div class="kv-line">
                         <label class="label">
                             <i>*</i>身份证号码：</label>
-                        <input type="text">
+                        <input type="text" name="idNum">
                     </div>
                     <div id="organIdIdenti" class="uploader uploaderPic">
                         <div class="queueList">
@@ -144,7 +144,7 @@
                         </div>
                     </div>
                 </form>
-                <form>
+                <form id="licenseId">
                     <div class="identi-title">
                         <span class="icon-73">企业执照认证<i>(未认证)</i></span>
                         <span class="tip">家教宝平台老师必须为通过身份认证的真实身份老师</span>
@@ -218,6 +218,7 @@
             </div>
         </div>
     </div>
+    <div id="errorMesg"></div>
     <script type="text/javascript" src="../js/require.js" data-main="../js/main"></script>
 </body>
 

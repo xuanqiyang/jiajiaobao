@@ -114,34 +114,34 @@
             </div>
         </div>
         <div class="info-content">
-            <h2 class="info-title">我的老师</h2>
+            <h2 class="info-title">个人资料</h2>
             <div class="info">
-                <form method="post" id="teacherinfo">
+                <form id="teacherinfo" method="post">
                     <div class="kv-line">
                         <label class="label">会员身份：</label>
                         <input type="text" class="static-input" value="老师" readonly="readonly">
                     </div>
-                    <div class="kv-line ">
-                        <label class="label "><i>*</i>联系人：</label>
-                        <input type="text " name="username">
-                        <label class="radio ">
-                            <input type="radio " name="sex " checked="checked ">男</label>
-                        <label class="radio ">
-                            <input type="radio " name="sex ">女</label>
+                    <div class="kv-line">
+                        <label class="label "><i>*</i>真实姓名：</label>
+                        <input type="text" name="username">
+                        <label class="radio">
+                            <input type="radio" name="sex " checked="checked ">男</label>
+                        <label class="radio">
+                            <input type="radio" name="sex ">女</label>
                     </div>
-                    <div class="kv-line ">
+                    <div class="kv-line">
                         <label class="label "><i>*</i>手机号码：</label>
-                        <input type="text" value="12145664564">
+                        <input type="text" name="phonenum" value="">
                     </div>
                     <div class="kv-line">
                         <label class="label "><i>*</i>联系地址：</label>
-                        <input type="text" value="12145664564">
+                        <input type="text" name="address" placeholder="输入详细的联系地址,为您匹配附近学生">
                     </div>
-                    <div class="kv-line ">
+                    <div class="kv-line">
                         <label class="label "><i>*</i>授课科目：</label>
-                        <input type="text " name=" " placeholder=" ">
+                        <input type="text" name="subject" placeholder="如“小学一年级语文”">
                     </div>
-                    <div class="kv-line ">
+                    <div class="kv-line">
                         <label class="label "><i>*</i>辅导方式：</label>
                         <select>
                             <option>学生上门</option>
@@ -149,31 +149,31 @@
                             <option>学生上门</option>
                         </select>
                     </div>
-                    <div class="kv-line ">
-                        <label class="label "><i>*</i>教师类型：</label>
+                    <div class="kv-line">
+                        <label class="label"><i>*</i>教师类型：</label>
                         <select>
                             <option>学生上门</option>
                             <option>学生上门</option>
                             <option>学生上门</option>
                         </select>
                     </div>
-                    <div class="kv-line ">
+                    <div class="kv-line">
                         <label class="label "><i>*</i>毕业院校：</label>
-                        <input type="text " name=" ">
+                        <input type="text" name="school">
                     </div>
-                    <div class="kv-line ">
-                        <label class="label ">所获证书：</label>
-                        <input type="text " name=" ">
+                    <div class="kv-line">
+                        <label class="label">所获证书：</label>
+                        <input type="text" name="">
                     </div>
-                    <div class="kv-line ">
-                        <label class="label ">成功案例：</label>
+                    <div class="kv-line">
+                        <label class="label">成功案例：</label>
                         <textarea></textarea>
                     </div>
-                    <div class="kv-line ">
-                        <label class="label ">自我简介：</label>
+                    <div class="kv-line">
+                        <label class="label">自我简介：</label>
                         <textarea></textarea>
                     </div>
-                    <button class="primary-btn blue-btn ">保存</button>
+                    <button type="button" class="primary-btn blue-btn btn-radius submit-btn">保存</button>
                 </form>
             </div>
         </div>
@@ -234,7 +234,8 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript " src="../js/require.js " data-main="../js/main "></script>
+    <div id="errorMesg"></div>
+    <script type="text/javascript " src="../js/require.js " data-main="../js/main"></script>
 </body>
 
 </html>

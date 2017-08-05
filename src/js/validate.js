@@ -80,8 +80,8 @@ require(['jquery', 'validator'], function($, validator) {
                 equalTo: "#password",
                 checkPsw: true
             },
-            agree:{
-                required:true
+            agree: {
+                required: true
             }
         },
         messages: {
@@ -113,15 +113,14 @@ require(['jquery', 'validator'], function($, validator) {
             }
         }
     });
-
     $("#changepsw").validate({
         errorPlacement: function(error, element) {
             $("#errorMesg").html(error);
         },
         rules: {
-            email:{
-                required:true,
-                email:true
+            email: {
+                required: true,
+                email: true
             },
             verifiCode: {
                 required: true,
@@ -144,9 +143,9 @@ require(['jquery', 'validator'], function($, validator) {
             }
         },
         messages: {
-            email:{
-                required:'请输入邮箱地址',
-                email:'请输入正确的的邮箱'
+            email: {
+                required: '请输入邮箱地址',
+                email: '请输入正确的的邮箱'
             },
             verifiCode: {
                 required: "请输入验证码",
@@ -169,7 +168,48 @@ require(['jquery', 'validator'], function($, validator) {
             }
         }
     });
-    
+    $("#organinfo").validate({
+        errorPlacement: function(error, element) {
+            $("#errorMesg").html(error);
+        },
+        rules: {
+            username: {
+                required: true,
+                checkName: true
+            },
+            industry: {
+                required: true
+            },
+            address: {
+                required: true
+            },
+            subject: {
+                required: true
+            },
+            phonenum: {
+                require: true
+            }
+        },
+        messages: {
+            username: {
+                required: "请输入您的用户昵称",
+                checkName: "用户昵称由中英文、数字、_、-组成"
+            },
+            phonenum: {
+                isPhone: "请输入正确的手机号码",
+                required: "请输入联系电话"
+            },
+            subject: {
+                required: "输入您的授课科目"
+            },
+            address: {
+                required: "输入您的授课地址"
+            },
+            school: {
+                require: "请输入毕业学校"
+            }
+        }
+    });
     $("#teacherinfo").validate({
         errorPlacement: function(error, element) {
             $("#errorMesg").html(error);
@@ -179,10 +219,18 @@ require(['jquery', 'validator'], function($, validator) {
                 required: true,
                 checkName: true
             },
-            subject: {
+            phonenum: {
+                isPhone: true,
                 required: true
             },
             address: {
+                required: true
+            },
+            subject: {
+                required: true
+            },
+
+            school: {
                 required: true
             }
         },
@@ -191,11 +239,19 @@ require(['jquery', 'validator'], function($, validator) {
                 required: "请输入您的用户昵称",
                 checkName: "用户昵称由中英文、数字、_、-组成"
             },
-            subject: {
-                required: "输入您的授课科目"
+            phonenum: {
+                isPhone: "请输入正确的手机号码",
+                required: "请输入联系电话"
             },
             address: {
                 required: "输入您的授课地址"
+            },
+            subject: {
+                required: "输入您的授课科目"
+            },
+
+            school: {
+                required: "请输入毕业学校"
             }
         }
     });
@@ -207,6 +263,10 @@ require(['jquery', 'validator'], function($, validator) {
             username: {
                 required: true,
                 checkName: true
+            },
+            phonenum: {
+                isPhone: true,
+                required: true
             },
             subject: {
                 required: true
@@ -225,6 +285,10 @@ require(['jquery', 'validator'], function($, validator) {
             username: {
                 required: "请输入您的用户昵称",
                 checkName: "用户昵称由中英文、数字、_、-组成"
+            },
+            phonenum: {
+                isPhone: "请输入正确的手机号码",
+                required: "请输入联系电话"
             },
             subject: {
                 required: "输入您的求教科目"
@@ -240,128 +304,78 @@ require(['jquery', 'validator'], function($, validator) {
             }
         }
     });
-    $("#portrait").validate({
+    $("#uploadCourse").validate({
         errorPlacement: function(error, element) {
             $("#errorMesg").html(error);
         },
         rules: {
-            portrait_fname: {
-                required: true,
-                filetype: ['jpg', 'png']
-            }
-        },
-        messages: {
-            portrait_fname: {
-                required: "请上传你的头像",
-                filetype: "图片只能是png,jpg"
-            }
-        }
-
-    });
-    $("#identi_work").validate({
-        errorPlacement: function(error, element) {
-            $("#errorMesg").html(error);
-        },
-        rules: {
-            work_fname: {
-                required: true,
-                filetype: ['jpg', 'png']
-            }
-        },
-        messages: {
-            work_fname: {
-                required: "请上传图片",
-                filetype: "图片只能是png,jpg"
-            }
-        }
-
-    });
-    $("#identi_teacherID").validate({
-        errorPlacement: function(error, element) {
-            $("#errorMesg").html(error);
-        },
-        rules: {
-            teacherID_fname: {
-                required: true,
-                filetype: ['jpg', 'png']
-            }
-        },
-        messages: {
-            teacherID_fname: {
-                required: "请上传图片",
-                filetype: "图片只能是png,jpg"
-            }
-        }
-
-    });
-    $("#identi_professor").validate({
-        errorPlacement: function(error, element) {
-            $("#errorMesg").html(error);
-        },
-        rules: {
-            professor_fname: {
-                required: true,
-                filetype: ['jpg', 'png']
-            }
-        },
-        messages: {
-            professor_fname: {
-                required: "请上传图片",
-                filetype: "图片只能是png,jpg"
-            }
-        }
-
-    });
-
-    $("#course_info").validate({
-        errorPlacement: function(error, element) {
-            $("#errorMesg").html(error);
-        },
-        rules: {
-            course_fname: {
-                filetype: ['jpg', 'png']
+            subject: {
+                required: true
             },
-            course_descript: {
+            grade: {
                 required: true
-            }
-        },
-        messages: {
-            course_fname: {
-                filetype: "图片只能是png,jpg"
             },
-            course_descript: {
-                required: "请填写对课程的详细描述"
-            }
-        }
-    });
-    $("#identi_ID").validate({
-        errorPlacement: function(error, element) {
-            $("#errorMesg").html(error);
-        },
-        rules: {
-            identi_ID: {
+            courseName: {
+                required: true
+            },
+            price: {
                 required: true
             }
         },
         messages: {
-            identi_ID: {
-                required: "未填写信息"
+            subject: {
+                required: "请填写教授科目"
+            },
+            grade: {
+                required: "请填写教授年级"
+            },
+            courseName: {
+                required: "请填写课程名称"
+            },
+            price: {
+                required: "请填写课程收费"
             }
         }
     });
-
-    $("#itenti_professor").validate({
+    $("#organId").validate({
         errorPlacement: function(error, element) {
             $("#errorMesg").html(error);
         },
         rules: {
-            itenti_professor: {
+            realName: {
+                required: true
+            },
+            idNum: {
                 required: true
             }
         },
         messages: {
-            itenti_professor: {
-                required: "未填写信息"
+            realName: {
+                required: '请填写真实姓名'
+            },
+            idNum: {
+                required: '请填写身份证号码'
+            }
+        }
+    });
+    $("#teacherId").validate({
+        errorPlacement: function(error, element) {
+            $("#errorMesg").html(error);
+        },
+        rules: {
+            realName: {
+                required: true
+            },
+            idNum: {
+                required: true
+            }
+        },
+        messages: {
+            realName: {
+                required: '请填写真实姓名'
+            },
+            idNum: {
+                required: '请填写身份证号码'
             }
         }
     });
